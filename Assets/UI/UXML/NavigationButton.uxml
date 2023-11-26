@@ -1,3 +1,3 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="navigation" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_foodstall_whale.png?fileID=2800000&amp;guid=9b14a30b6b2dbbf49a6989668ecb067d&amp;type=3#sign_foodstall_whale&apos;); width: 195px; height: 254px; position: relative; left: 1164px; top: 633px;" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="navigation" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_foodstall_whale.png?fileID=2800000&amp;guid=9b14a30b6b2dbbf49a6989668ecb067d&amp;type=3#sign_foodstall_whale&apos;); width: 195px; height: 254px; position: relative; left: 1164px; top: 633px;" />
 </ui:UXML>
