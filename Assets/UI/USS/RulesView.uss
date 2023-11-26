@@ -1,0 +1,21 @@
+.rules-button {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 300px;
+    height: 80px;
+    font-size: 32px;
+    -unity-font-style: bold;
+}
+
+.set-entry {
+    height: 80px;
+    margin-bottom: 20px;
+    -unity-text-align: middle-left;
+    font-size: 32px;
+    padding-left: 25px;
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}

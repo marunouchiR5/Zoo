@@ -1,0 +1,9 @@
+.inspect-button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 305px;
+    left: 1065px;
+    font-size: 20px;
+    -unity-font-style: bold;
+}

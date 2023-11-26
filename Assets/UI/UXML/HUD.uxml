@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="TaskDisplay" src="project://database/Assets/UI/UXML/TaskDisplay.uxml?fileID=9197481963319205126&amp;guid=938992de72ced8e45bd495d12bc44688&amp;type=3#TaskDisplay" />
+    <ui:Template name="InventoryDisplay" src="project://database/Assets/UI/UXML/InventoryDisplay.uxml?fileID=9197481963319205126&amp;guid=4f43c21e944d68e46a0a1106867a01bc&amp;type=3#InventoryDisplay" />
+    <ui:Template name="EquipmentDisplay" src="project://database/Assets/UI/UXML/EquipmentDisplay.uxml?fileID=9197481963319205126&amp;guid=86cd62fb9c6014a448cd078cfada4ca3&amp;type=3#EquipmentDisplay" />
+    <ui:Template name="SanityLevelDisplay" src="project://database/Assets/UI/UXML/SanityLevelDisplay.uxml?fileID=9197481963319205126&amp;guid=676d491cdf0485b429197c33701824ba&amp;type=3#SanityLevelDisplay" />
+    <ui:Template name="PlayerProfileDisplay" src="project://database/Assets/UI/UXML/PlayerProfileDisplay.uxml?fileID=9197481963319205126&amp;guid=06cb0a41fc0b44b4c8b3edf8d3c75764&amp;type=3#PlayerProfileDisplay" />
+    <ui:Template name="SymptonsDisplay" src="project://database/Assets/UI/UXML/SymptonDisplay.uxml?fileID=9197481963319205126&amp;guid=4ab1b67bed1841a4abbbda3aa7f0ba47&amp;type=3#SymptonDisplay" />
+    <Style src="project://database/Assets/UI/USS/HUD.uss?fileID=7433441132597879392&amp;guid=5b39282397c2afb4496d15af1f084228&amp;type=3#HUD" />
+    <ui:VisualElement name="HUD" style="flex-grow: 1; background-color: rgb(217, 217, 217); justify-content: space-around;">
+        <ui:Instance template="TaskDisplay" name="TaskDisplay" />
+        <ui:Instance template="InventoryDisplay" name="InventoryDisplay" />
+        <ui:Instance template="EquipmentDisplay" name="EquipmentDisplay" />
+        <ui:VisualElement name="player-stats" style="flex-direction: row; justify-content: space-between;">
+            <ui:Instance template="SanityLevelDisplay" name="SanityLevelDisplay" />
+            <ui:Instance template="PlayerProfileDisplay" name="PlayerProfileDisplay" />
+            <ui:Instance template="SymptonsDisplay" name="SymptonDisplay" />
+        </ui:VisualElement>
+        <ui:VisualElement name="buttons" style="flex-direction: row; justify-content: space-around;">
+            <ui:Button text="Map" parse-escape-sequences="true" display-tooltip-when-elided="true" name="map--button" class="hud-button" />
+            <ui:Button text="Rules" parse-escape-sequences="true" display-tooltip-when-elided="true" name="rules--button" class="hud-button" />
+            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings--button" class="hud-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

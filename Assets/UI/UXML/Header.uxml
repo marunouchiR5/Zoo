@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Header" style="flex-direction: row;">
+        <ui:Label tabindex="-1" text="Current Location" parse-escape-sequences="true" display-tooltip-when-elided="true" name="location" style="font-size: 36px; -unity-font-style: bold; margin-left: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

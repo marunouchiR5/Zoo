@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc60808d016a24fb9f6e35135f4cb2, type: 3}
+  m_Name: NOTICE POSTED IN FRONT OF THE GATE OF THE AQUARIUM
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: 
+    Content: If you are fortunate to see this poster, please lay low.
+    Options: []
+  - Speaker: 
+    Content: Letting others discover that you can see it is taboo.
+    Options: []
+  - Speaker: 
+    Content: We believe that you have established based on the visitor guidelines
+      that the zoo is not safe, and even strange.
+    Options: []
+  - Speaker: 
+    Content: We are an undercover government operation intended to protect the innocent.
+    Options: []
+  - Speaker: 
+    Content: Please follow the below instructions to keep yourself safe.
+    Options: []
+  - Speaker: 
+    Content: This is the only way to leave the zoo.
+    Options: []
+  - Speaker: 1
+    Content: Enter the aquarium.
+    Options: []
+  - Speaker: 1
+    Content: Nobody works here.
+    Options: []
+  - Speaker: 1
+    Content: Pick up a set of black uniforms and put it on.
+    Options: []
+  - Speaker: 1
+    Content: This is the only way to signal to our agents.
+    Options: []
+  - Speaker: 1
+    Content: When you are walking outside, do not worry about other zoo employees.
+    Options: []
+  - Speaker: 1
+    Content: They will not mind your existence.
+    Options: []
+  - Speaker: 2
+    Content: Do not visit the Lions Area.
+    Options: []
+  - Speaker: 3
+    Content: "Everywhere you go, make sure you can see rabbits present \u2014 runaway
+      rabbits, rabbit merchandise, people wearing rabbit ears, or the Rabbit Blood
+      from drink stalls."
+    Options: []
+  - Speaker: 3
+    Content: "Rabbits are our symbol and codeword, they represent \u201CSAFETY\u201D
+      and \u201CPROTECTION\u201D."
+    Options: []
+  - Speaker: 4
+    Content: When visiting the Elephants Area, do not read any signage.
+    Options: []
+  - Speaker: 5
+    Content: Do not trust anything written on the map, and do not follow them.
+    Options: []
+  - Speaker: 5
+    Content: If you followed any of them, please check if the map you collected at
+      the zoo entrance has a dashed line.
+    Options: []
+  - Speaker: 5
+    Content: Tear off the corner marked by said dashed line, and make your way to
+      the Rabbits Area.
+    Options: []
+  - Speaker: 5
+    Content: There, feed this piece of paper to a rabbit while avoiding detection,
+      and stay here.
+    Options: []
+  - Speaker: 5
+    Content: You can leave after hearing laughter not produced by visitors, you can
+      leave this area.
+    Options: []
+  - Speaker: 5
+    Content: After this, go to the Monkeys area.
+    Options: []
+  - Speaker: 5
+    Content: The safety exit is at the end of the right passageway.
+    Options: []
+  SetName: NOTICE POSTED IN FRONT OF THE GATE OF THE AQUARIUM

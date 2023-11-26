@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
+    <ui:VisualElement name="zoo-gate" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_gate.png?fileID=2800000&amp;guid=b5f8599495b8c814bbb3a1e6c03e36dd&amp;type=3#game design_gate&apos;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="visitor-guidelines" class="interactable" style="position: absolute; width: 384px; height: 401px; background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_visitorguideline.png?fileID=2800000&amp;guid=1405d1d81c08da04988c2f8b1f34dd62&amp;type=3#sign_visitorguideline&apos;); left: 124px; top: 488px;" />
+        <ui:VisualElement name="desk" style="position: absolute; background-image: url(&apos;project://database/Assets/UI/Textures/elements/place_to_collect_map.png?fileID=2800000&amp;guid=b99dc030670bef241a4c641aa4b70743&amp;type=3#place_to_collect_map&apos;); width: 227px; height: 321px; left: 1126px; top: 552px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="map" class="interactable" style="position: absolute; background-image: url(&apos;project://database/Assets/UI/Textures/elements/map.png?fileID=2800000&amp;guid=f085a288f8416bb4d800dc2f5fd59bcc&amp;type=3#map&apos;); width: 226px; height: 116px; left: -8px; top: -98px;" />
+        </ui:VisualElement>
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="navigation" class="navigation interactable" style="left: 633px; top: 105px; width: 287px; height: 720px;" />
+    </ui:VisualElement>
+</ui:UXML>

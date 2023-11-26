@@ -1,0 +1,77 @@
+.log-button {
+    width: 85px;
+    height: 85px;
+    font-size: 20px;
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+    border-bottom-right-radius: 42px;
+    border-bottom-left-radius: 42px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    right: 70px;
+    bottom: -855px;
+    position: absolute;
+}
+
+.option-button {
+    position: relative;
+    width: 300px;
+    height: 80px;
+    -unity-font-style: bold;
+    font-size: 32px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.set-name {
+    -unity-font-style: bold;
+    font-size: 40px;
+    -unity-text-align: upper-center;
+    align-self: center;
+    color: rgb(0, 0, 0);
+    width: 750px;
+    flex-wrap: wrap;
+    white-space: normal;
+}
+
+.content-label {
+    white-space: normal;
+    font-size: 32px;
+    width: 750px;
+    color: rgb(0, 0, 0);
+    align-self: center;
+    margin-top: 30px;
+}
+
+.speaker-label {
+    -unity-font-style: bold;
+    position: absolute;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    left: 50px;
+    top: 30px;
+}
+
+.paragraph-entry {
+    margin-top: 50px;
+}
+
+.margin-element {
+    height: 200px;
+}
+
+#conversation-area {
+    width: 1000px;
+    height: 250px;
+    font-size: 32px;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+#conversation-area:hover {
+    background-color: rgba(227, 227, 227, 1);
+}
+
+#conversation-area:disabled {
+    background-color: rgba(217, 217, 217, 1); /* Maintain the same background color */
+    opacity: 1; /* Override default dimming */
+}

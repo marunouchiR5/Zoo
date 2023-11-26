@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="ZooGate" src="project://database/Assets/UI/UXML/ZooGate.uxml?fileID=9197481963319205126&amp;guid=f0b482f47f6ddb846812dd97cd3b9c6c&amp;type=3#ZooGate" />
+    <ui:Template name="RabbitArea" src="project://database/Assets/UI/UXML/RabbitArea.uxml?fileID=9197481963319205126&amp;guid=94303b3aa1a3cbd4f9503e301fd886ba&amp;type=3#RabbitArea" />
+    <ui:Template name="LionArea" src="project://database/Assets/UI/UXML/LionArea.uxml?fileID=9197481963319205126&amp;guid=ba28fe10f5fe46641bf919cb5dfdab6b&amp;type=3#LionArea" />
+    <ui:Template name="ElephantArea" src="project://database/Assets/UI/UXML/ElephantArea.uxml?fileID=9197481963319205126&amp;guid=53d3d14bc32a64342b71f83308822e90&amp;type=3#ElephantArea" />
+    <ui:Template name="MonkeyArea" src="project://database/Assets/UI/UXML/MonkeyArea.uxml?fileID=9197481963319205126&amp;guid=bb0119d214cf70341bdbfa8a343c202c&amp;type=3#MonkeyArea" />
+    <ui:VisualElement name="scene-view" style="flex-grow: 1;">
+        <ui:Instance template="ZooGate" name="ZooGate" style="position: absolute;" />
+        <ui:Instance template="RabbitArea" name="RabbitArea" style="position: absolute; display: none;" />
+        <ui:Instance template="LionArea" name="LionArea" style="display: none; position: absolute;" />
+        <ui:Instance template="ElephantArea" name="ElephantArea" style="position: absolute; display: none;" />
+        <ui:Instance template="MonkeyArea" name="MonkeyArea" style="position: absolute; display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/InventoryDisplay.uss?fileID=7433441132597879392&amp;guid=105593db285db834682ed884f0750151&amp;type=3#InventoryDisplay" />
+    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" class="item-entry" />
+</ui:UXML>

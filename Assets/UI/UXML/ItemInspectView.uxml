@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/ItemInspectView.uss?fileID=7433441132597879392&amp;guid=9cac406ae21e38146ba62ce1844bbb7a&amp;type=3#ItemInspectView" />
+    <ui:VisualElement name="item-inspect-view" style="width: 1470px; height: 1020px; justify-content: center;">
+        <ui:VisualElement name="item-description" style="width: 600px; height: 410px; align-self: center; background-color: rgb(217, 217, 217); justify-content: center;">
+            <ui:VisualElement name="item-icon" style="width: 100px; height: 100px; background-color: rgb(255, 255, 255); margin-left: 50px; margin-bottom: 20px; margin-top: 50px;" />
+            <ui:Label tabindex="-1" text="Rabbit Blood" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" style="font-size: 36px; -unity-font-style: bold-and-italic; margin-left: 50px;" />
+            <ui:Label tabindex="-1" text="This tantalizing beverage not only looks inviting but also seems capable of restoring one Sanity Point." parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-desc" style="font-size: 24px; -unity-font-style: italic; margin-left: 50px; white-space: normal; width: 475px; height: 150px;" />
+        </ui:VisualElement>
+        <ui:Button text="Cancel" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel--button" class="inspect-button" />
+        <ui:Button text="Use" parse-escape-sequences="true" display-tooltip-when-elided="true" name="use--button" class="inspect-button" style="position: absolute; width: 80px; height: 80px; top: 405px; left: 1065px;" />
+        <ui:Button text="Equip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="equip--button" class="inspect-button" style="position: absolute; width: 80px; height: 80px; top: 505px; left: 1065px;" />
+    </ui:VisualElement>
+</ui:UXML>

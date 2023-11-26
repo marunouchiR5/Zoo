@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/ConversationView.uss?fileID=7433441132597879392&amp;guid=cab8315123d424941adec9e8bcc4a5db&amp;type=3#ConversationView" />
+    <ui:VisualElement name="log-view" style="align-items: center; display: flex;">
+        <ui:ScrollView name="log-scroll-view" style="width: 1000px; height: 1024px; background-color: rgb(217, 217, 217); position: absolute;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="back--button" class="log-button" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="MainGameView" src="project://database/Assets/UI/UXML/MainGameView.uxml?fileID=9197481963319205126&amp;guid=be22089bd344ddd46adfb65d08130046&amp;type=3#MainGameView" />
+    <ui:Template name="HUD" src="project://database/Assets/UI/UXML/HUD.uxml?fileID=9197481963319205126&amp;guid=6f105729f768276438ccba32353a1819&amp;type=3#HUD" />
+    <ui:Template name="Header" src="project://database/Assets/UI/UXML/Header.uxml?fileID=9197481963319205126&amp;guid=a12d503076e79754ab5afae60fbe4965&amp;type=3#Header" />
+    <ui:Instance template="MainGameView" name="MainGameView" style="left: 0; bottom: 0; width: 1470px; height: 1020px; position: absolute;" />
+    <ui:Instance template="HUD" name="HUD" style="position: absolute; right: 0; bottom: 0; width: 450px; height: 1020px; background-color: rgb(217, 217, 217);" />
+    <ui:Instance template="Header" name="Header" style="width: 100%; height: 60px; background-color: rgb(217, 217, 217);" />
+</ui:UXML>

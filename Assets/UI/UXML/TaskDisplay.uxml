@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/HUD.uss?fileID=7433441132597879392&amp;guid=5b39282397c2afb4496d15af1f084228&amp;type=3#HUD" />
+    <Style src="project://database/Assets/UI/USS/TaskDisplay.uss?fileID=7433441132597879392&amp;guid=41fccb633c6dacd43bdd0b80f2cbe573&amp;type=3#TaskDisplay" />
+    <ui:VisualElement name="TaskDisplay" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Task" parse-escape-sequences="true" display-tooltip-when-elided="true" name="task-title" class="title-label" />
+        <ui:ListView focusable="true" name="task-list" class="hud-list-view" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/HUD.uss?fileID=7433441132597879392&amp;guid=5b39282397c2afb4496d15af1f084228&amp;type=3#HUD" />
+    <ui:VisualElement name="EquipmentDisplay" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Equipment" parse-escape-sequences="true" display-tooltip-when-elided="true" name="equipment-title" class="title-label" />
+        <ui:VisualElement name="equipment-head" class="equipment-section">
+            <ui:Label tabindex="-1" text="Head" parse-escape-sequences="true" display-tooltip-when-elided="true" name="head-desc" class="equipment-desc" />
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="head-name" class="equipment-name" />
+        </ui:VisualElement>
+        <ui:VisualElement name="equipment-body" class="equipment-section" style="flex-grow: 1; flex-direction: row;">
+            <ui:Label tabindex="-1" text="Body" parse-escape-sequences="true" display-tooltip-when-elided="true" name="body-desc" class="equipment-desc" />
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="body-name" class="equipment-name" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

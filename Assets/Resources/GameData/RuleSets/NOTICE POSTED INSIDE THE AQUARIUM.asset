@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc60808d016a24fb9f6e35135f4cb2, type: 3}
+  m_Name: NOTICE POSTED INSIDE THE AQUARIUM
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: 1
+    Content: "Do not enter when there\u2019s anybody around."
+    Options: []
+  - Speaker: 1
+    Content: If an employee welcomed you after your entrance, find an excuse to leave
+      after reading this.
+    Options: []
+  - Speaker: 2
+    Content: If nobody has appeared up to the point you are reading this, you can
+      stay and visit or rest.
+    Options: []
+  - Speaker: 2
+    Content: All food items are free here, and please help yourself.
+    Options: []
+  - Speaker: 2
+    Content: "Take care not to eat \u201CGoat Meat\u201D."
+    Options: []
+  - Speaker: 2
+    Content: If you see items so marked on the shelf, ignore them.
+    Options: []
+  - Speaker: 3
+    Content: If you entered the aquarium before 4:00 pm on a day, please limit your
+      stay to under thirty minutes.
+    Options: []
+  - Speaker: 4
+    Content: If you entered the aquarium after 4:01 pm on a day, please stay no shorter
+      than four hours.
+    Options: []
+  - Speaker: 5
+    Content: This is an aquarium, and only marine animals are on display.
+    Options: []
+  - Speaker: 5
+    Content: If you see an elephant swimming in the Whales Area, do not scream or
+      appear shocked, that is a 3D hologram installed for amusement.
+    Options: []
+  - Speaker: 5
+    Content: Treat it normally, and pretend it is a whale.
+    Options: []
+  - Speaker: 6
+    Content: The aquarium can be used to spend the night.
+    Options: []
+  - Speaker: 6
+    Content: Left of the jellyfish area are guest rooms for tourists and vagabonds.
+    Options: []
+  - Speaker: 6
+    Content: If you need to use a guest room, please switch off the jellyfish night
+      lamp in your room before going to sleep.
+    Options: []
+  - Speaker: 7
+    Content: Our employees don red uniforms, and only perform routine cleaning and
+      checking every night after 0:30 am.
+    Options: []
+  - Speaker: 7
+    Content: If you encounter a person in black uniforms claiming to be an employee,
+      you can talk to them and can ask them to temporarily show you around.
+    Options: []
+  - Speaker: 7
+    Content: Do not hand your maps to this person, particularly the corner you can
+      tear off following the dashed line.
+    Options: []
+  - Speaker: 8
+    Content: Disobey the above rules, all consequences are at your own cost.
+    Options: []
+  - Speaker: 9
+    Content: The aquarium exists and does not serve any organization.
+    Options: []
+  SetName: NOTICE POSTED INSIDE THE AQUARIUM

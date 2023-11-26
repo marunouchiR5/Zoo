@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="OptionButton" src="project://database/Assets/UI/UXML/OptionButton.uxml?fileID=9197481963319205126&amp;guid=deed8d366edce564d91a09514db9c41a&amp;type=3#OptionButton" />
+    <Style src="project://database/Assets/UI/USS/ConversationView.uss?fileID=7433441132597879392&amp;guid=cab8315123d424941adec9e8bcc4a5db&amp;type=3#ConversationView" />
+    <ui:VisualElement name="conversation-view" style="align-items: center;">
+        <ui:VisualElement name="conversation-window" style="top: 680px; position: absolute;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="conversation-area" class="conversation-area" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="speaker" style="font-size: 32px; -unity-font-style: bold-and-italic; position: absolute; left: 50px; bottom: 225px;" />
+            <ui:VisualElement name="options" style="position: absolute; flex-direction: column-reverse; justify-content: flex-start; height: 600px; left: 695px; bottom: 250px;">
+                <ui:Instance template="OptionButton" name="OptionButton" />
+                <ui:Instance template="OptionButton" name="OptionButton" />
+                <ui:Instance template="OptionButton" name="OptionButton" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="Log" parse-escape-sequences="true" display-tooltip-when-elided="true" name="log--button" class="log-button" style="display: flex; position: absolute;" />
+    </ui:VisualElement>
+</ui:UXML>

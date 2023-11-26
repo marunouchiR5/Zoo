@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/HUD.uss?fileID=7433441132597879392&amp;guid=5b39282397c2afb4496d15af1f084228&amp;type=3#HUD" />
+    <Style src="project://database/Assets/UI/USS/InventoryDisplay.uss?fileID=7433441132597879392&amp;guid=105593db285db834682ed884f0750151&amp;type=3#InventoryDisplay" />
+    <ui:VisualElement name="InventoryDisplay" style="flex-grow: 1;">
+        <ui:VisualElement name="inventory-header" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Inventory" parse-escape-sequences="true" display-tooltip-when-elided="true" name="inventory-title" class="title-label" />
+            <ui:Label tabindex="-1" text="Token: X" parse-escape-sequences="true" display-tooltip-when-elided="true" name="token" class="title-label" style="-unity-text-align: upper-right; margin-right: 15px; -unity-font-style: normal;" />
+        </ui:VisualElement>
+        <ui:ListView focusable="true" name="inventory-list" class="hud-list-view" />
+    </ui:VisualElement>
+</ui:UXML>

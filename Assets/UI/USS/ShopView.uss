@@ -1,0 +1,18 @@
+.item-list--labels {
+    -unity-font-style: bold;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+.shop--button {
+    width: 300px;
+    height: 80px;
+    font-size: 32px;
+    -unity-font-style: bold;
+}
+
+.amount--button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
