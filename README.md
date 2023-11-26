@@ -30,3 +30,12 @@ This guide will walk you through the steps to deploy our game project from GitHu
 5. Navigate to and select the folder where you just cloned the project.
 6. Click `Add Project`.
 7. The game project will now be listed in your Unity Hub, and you can open and edit it directly from there.
+
+### 3. Open and Run the Project in Unity Editor
+
+1. Click to open the project in Unity Editor.
+2. Navigate to the `Assets > Scenes` folder, then open the `Game` scene file.
+3. Switch to the `Game` window (located just under the `Play` button at the top). Change the aspect ratio to Full HD (1920x1080) for optimal display.
+4. Click the `Play` button at the top of the screen to test the game.
+
+**Tips**: For a larger game view during testing, switch from `Play Focused` to `Play Maximized`.
