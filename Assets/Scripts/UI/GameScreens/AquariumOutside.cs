@@ -115,7 +115,7 @@ public class AquariumOutside : BaseView
                 Cancel();
                 break;
             case "Go Inside":
-                GoInside();
+                GoToAquariumInside();
                 break;
                 // ... other cases as needed ...
         }
@@ -134,12 +134,6 @@ public class AquariumOutside : BaseView
             case "Go to Lion Area":
                 GoToLionArea();
                 break;
-            case "Go to Monkey Area":
-                GoToMonkeyArea();
-                break;
-            case "Go to Elephant Area":
-                GoToElephantArea();
-                break;
                 // ... other cases as needed ...
         }
     }
@@ -149,9 +143,9 @@ public class AquariumOutside : BaseView
         m_GameViewManager.ConversationView.HideScreen();
     }
 
-    private void GoInside()
+    private void GoToAquariumInside()
     {
-        //m_GameViewManager.ShowAquariumInside();
+        m_GameViewManager.ShowAquariumInside();
         m_GameViewManager.ConversationView.HideScreen();
     }
 

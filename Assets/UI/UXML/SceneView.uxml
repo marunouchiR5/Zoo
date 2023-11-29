@@ -6,13 +6,19 @@
     <ui:Template name="MonkeyArea" src="project://database/Assets/UI/UXML/MonkeyArea.uxml?fileID=9197481963319205126&amp;guid=bb0119d214cf70341bdbfa8a343c202c&amp;type=3#MonkeyArea" />
     <ui:Template name="ZooDirectorRoom" src="project://database/Assets/UI/UXML/ZooDirectorRoom.uxml?fileID=9197481963319205126&amp;guid=f3f025a543847d948ba9f693204da5d8&amp;type=3#ZooDirectorRoom" />
     <ui:Template name="AuqariumOutside" src="project://database/Assets/UI/UXML/AquariumOutside.uxml?fileID=9197481963319205126&amp;guid=ca8a943815a889548b1e0a12e8be9313&amp;type=3#AquariumOutside" />
+    <ui:Template name="AquariumInside" src="project://database/Assets/UI/UXML/AquariumInside.uxml?fileID=9197481963319205126&amp;guid=7565f75a580548249b7197325e13f5fb&amp;type=3#AquariumInside" />
+    <ui:Template name="GuestRoom" src="project://database/Assets/UI/UXML/GuestRoom.uxml?fileID=9197481963319205126&amp;guid=ee448d9ab18bd9e48b2694b8d2cafb66&amp;type=3#GuestRoom" />
+    <ui:Template name="WhaleArea" src="project://database/Assets/UI/UXML/WhaleArea.uxml?fileID=9197481963319205126&amp;guid=3c1556f31399a784db1aa4b0a17c65dd&amp;type=3#WhaleArea" />
     <ui:VisualElement name="scene-view" style="flex-grow: 1;">
         <ui:Instance template="ZooGate" name="ZooGate" style="position: absolute;" />
         <ui:Instance template="RabbitArea" name="RabbitArea" style="position: absolute; display: none;" />
         <ui:Instance template="LionArea" name="LionArea" style="display: none; position: absolute;" />
-        <ui:Instance template="ElephantArea" name="ElephantArea" style="position: absolute; display: flex;" />
+        <ui:Instance template="ElephantArea" name="ElephantArea" style="position: absolute; display: none;" />
         <ui:Instance template="MonkeyArea" name="MonkeyArea" style="position: absolute; display: none;" />
         <ui:Instance template="ZooDirectorRoom" name="ZooDirectorRoom" style="position: absolute; display: none;" />
         <ui:Instance template="AuqariumOutside" name="AquariumOutside" style="position: absolute; display: none;" />
+        <ui:Instance template="AquariumInside" name="AquariumInside" style="position: absolute; display: none;" />
+        <ui:Instance template="GuestRoom" name="GuestRoom" style="display: none;" />
+        <ui:Instance template="WhaleArea" name="WhaleArea" style="position: absolute; display: none;" />
     </ui:VisualElement>
 </ui:UXML>

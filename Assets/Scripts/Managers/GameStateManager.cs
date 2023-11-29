@@ -33,6 +33,7 @@ public class GameStateManager : MonoBehaviour
     public List<string> VisitedAreas;
     public bool BlackClothesCollected { get; set; }
     public bool ZooDirectorRoomMapCollected { get; set; }
+    public bool JellyfishLightUsed { get; set; }
 
     // specific view related
     public ConversationData ConversationData;
@@ -119,7 +120,7 @@ public class GameStateManager : MonoBehaviour
 
     public void UpdateSanity(int currentSanity)
     {
-        CurrentSanity = currentSanity;
+        CurrentSanity = Mathf.Min(currentSanity, MaxSanity);
         SanityChanged?.Invoke();
     }
 

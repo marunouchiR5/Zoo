@@ -17,7 +17,10 @@ public enum DecisionAction
     GoToMonkeyArea,
     GoToElephantArea,
     GoToZooDirectorRoom,
-    GoInside,
-
+    GoToZooGate,
+    GoToAquariumInside,
+    GoToAquariumOutside,
+    GoToGuestRoom,
+    GoToWhaleArea,
     // Add other actions as needed
 }

@@ -19,4 +19,4 @@ MonoBehaviour:
     - Text: Cancel
       Action: 0
     - Text: Go Inside
-      Action: 5
+      Action: 7

@@ -18,6 +18,9 @@ public class GameViewManager : MonoBehaviour
     [SerializeField] MonkeyArea m_MonkeyArea;
     [SerializeField] ZooDirectorRoom m_ZooDirectorRoom;
     [SerializeField] AquariumOutside m_AquariumOutside;
+    [SerializeField] AquariumInside m_AquariumInside;
+    [SerializeField] GuestRoom m_GuestRoom;
+    [SerializeField] WhaleArea m_WhaleArea;
 
     [Header("HUDs")]
     [Tooltip("HUDs remain active at all times unless explicitly disabled.")]
@@ -48,7 +51,7 @@ public class GameViewManager : MonoBehaviour
         SetupOverlayViews();
 
         // start new game or load previous game
-        ShowZooDirectorRoom();
+        ShowAquariumOutside();
     }
 
     void Start()
@@ -73,11 +76,20 @@ public class GameViewManager : MonoBehaviour
         if (m_MonkeyArea != null)
             m_AllSceneViews.Add(m_MonkeyArea);
 
+        if (m_ZooDirectorRoom != null)
+            m_AllSceneViews.Add(m_ZooDirectorRoom);
+
         if (m_AquariumOutside != null)
             m_AllSceneViews.Add(m_AquariumOutside);
 
-        if (m_ZooDirectorRoom != null)
-            m_AllSceneViews.Add(m_ZooDirectorRoom);
+        if (m_AquariumInside != null)
+            m_AllSceneViews.Add(m_AquariumInside);
+
+        if (m_GuestRoom != null)
+            m_AllSceneViews.Add(m_GuestRoom);
+
+        if (m_WhaleArea != null)
+            m_AllSceneViews.Add(m_WhaleArea);
     }
 
     // shows one screen at a time
@@ -127,16 +139,34 @@ public class GameViewManager : MonoBehaviour
         LocationChanged?.Invoke("Monkey Area");
     }
 
-    public void ShowAquariumOutside()
-    {
-        ShowSceneView(m_AquariumOutside);
-        LocationChanged?.Invoke("Aquarium Outside");
-    }
-
     public void ShowZooDirectorRoom()
     {
         ShowSceneView(m_ZooDirectorRoom);
-        LocationChanged?.Invoke("Zoo Director Room");
+        LocationChanged?.Invoke("Zoo Director's Room");
+    }
+
+    public void ShowAquariumOutside()
+    {
+        ShowSceneView(m_AquariumOutside);
+        LocationChanged?.Invoke("Aquarium Entrance");
+    }
+
+    public void ShowAquariumInside()
+    {
+        ShowSceneView(m_AquariumInside);
+        LocationChanged?.Invoke("Aquarium Inside");
+    }
+
+    public void ShowGuestRoom()
+    {
+        ShowSceneView(m_GuestRoom);
+        LocationChanged?.Invoke("Guest Room");
+    }
+
+    public void ShowWhaleArea()
+    {
+        ShowSceneView(m_WhaleArea);
+        LocationChanged?.Invoke("Whale Area");
     }
 
     void SetupOverlayViews()

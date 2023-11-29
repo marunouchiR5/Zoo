@@ -5,4 +5,8 @@
     border-top-color: rgba(149, 149, 149, 0);
     border-bottom-color: rgba(149, 149, 149, 0);
     position: absolute;
+    width: 733px;
+    height: 283px;
+    left: 211px;
+    top: 484px;
 }

@@ -106,6 +106,12 @@ public class RabbitArea : BaseView
             case "Go to Lion Area":
                 GoToLionArea();
                 break;
+            case "Go to Aquarium Entrance":
+                GoToAquariumOutside();
+                break;
+            case "Go to Zoo Gate":
+                GoToZooGate();
+                break;
                 // ... other cases as needed ...
         }
     }
@@ -124,6 +130,18 @@ public class RabbitArea : BaseView
     private void GoToLionArea()
     {
         m_GameViewManager.ShowLionArea();
+        m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void GoToAquariumOutside()
+    {
+        m_GameViewManager.ShowAquariumOutside();
+        m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void GoToZooGate()
+    {
+        m_GameViewManager.ShowZooGate();
         m_GameViewManager.ConversationView.HideScreen();
     }
 

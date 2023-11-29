@@ -25,7 +25,3 @@ MonoBehaviour:
       Action: 1
     - Text: Go to Lion Area
       Action: 2
-    - Text: Go to Monkey Area
-      Action: 3
-    - Text: Go to Elephant Area
-      Action: 4

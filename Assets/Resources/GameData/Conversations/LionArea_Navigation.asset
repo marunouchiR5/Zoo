@@ -27,3 +27,7 @@ MonoBehaviour:
       Action: 3
     - Text: Go to Elephant Area
       Action: 4
+    - Text: Go to Aquarium Entrance
+      Action: 7
+    - Text: Go to Zoo Gate
+      Action: 8

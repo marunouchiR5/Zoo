@@ -106,6 +106,9 @@ public class ElephantArea : BaseView
             case "Go to Lion Area":
                 GoToLionArea();
                 break;
+            case "Go to Zoo Director's Room":
+                GoToZooDirectorRoom();
+                break;
                 // ... other cases as needed ...
         }
     }
@@ -124,6 +127,12 @@ public class ElephantArea : BaseView
     private void GoToLionArea()
     {
         m_GameViewManager.ShowLionArea();
+        m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void GoToZooDirectorRoom()
+    {
+        m_GameViewManager.ShowZooDirectorRoom();
         m_GameViewManager.ConversationView.HideScreen();
     }
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fec59d4508d6a3148858e6d2deb998b0, type: 3}
-  m_Name: ElephantArea_Navigation
+  m_Name: WhaleArea_Navigation
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
@@ -21,9 +21,5 @@ MonoBehaviour:
     Options:
     - Text: Cancel
       Action: 0
-    - Text: Go to Monkey Area
-      Action: 3
-    - Text: Go to Lion Area
-      Action: 2
-    - Text: Go to Zoo Director's Room
-      Action: 5
+    - Text: Go To Aquarium Inside
+      Action: 7

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
+    <ui:VisualElement name="guest-room" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_guestroom.png?fileID=2800000&amp;guid=9445e89a1c962f4459ede8aa9f7a5e73&amp;type=3#game design_guestroom&apos;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="bed" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/bed.png?fileID=2800000&amp;guid=ec05aeeeee4bf0a4b88a2e131f9a8c8a&amp;type=3#bed&apos;);" />
+        <ui:VisualElement name="bedside-table" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/bedsidetable.png?fileID=2800000&amp;guid=bf166021024ce5c4ebc287df00600357&amp;type=3#bedsidetable&apos;); width: 190px; height: 217px; left: 997px; position: absolute; top: 499px;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="jellyfish-light" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/jellyfish_light.png?fileID=2800000&amp;guid=4842abf1166de6746a8df9b5335da1df&amp;type=3#jellyfish_light&apos;); width: 84px; height: 278px; left: 1031px; top: 225px;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="note-guest-room" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/note_guest_room.png?fileID=2800000&amp;guid=489d8f2b6c1d35d469d862030d95b43c&amp;type=3#note_guest_room&apos;); width: 62px; height: 81px; left: 583px; top: 338px;" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" />
+    </ui:VisualElement>
+</ui:UXML>
