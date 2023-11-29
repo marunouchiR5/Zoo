@@ -31,6 +31,8 @@ public class GameStateManager : MonoBehaviour
     // system related
     public bool ZooGateMapCollected { get; set; }
     public List<string> VisitedAreas;
+    public bool BlackClothesCollected { get; set; }
+    public bool ZooDirectorRoomMapCollected { get; set; }
 
     // specific view related
     public ConversationData ConversationData;

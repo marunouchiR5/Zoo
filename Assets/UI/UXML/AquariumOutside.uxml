@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
+    <ui:VisualElement name="aquarium-outside" style="background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_aquarium%20gate.png?fileID=2800000&amp;guid=62bc5068293ab2f4b9ea96253d9eda7e&amp;type=3#game design_aquarium gate&apos;); width: 1470px; height: 1020px;">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="black-clothes" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/black_clothes.png?fileID=2800000&amp;guid=716dd365592afaf48a3bc9bd86e1700d&amp;type=3#black_clothes&apos;); width: 404px; height: 342px; left: 150px; top: 187px;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="notice-outside" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_aq_gate.png?fileID=2800000&amp;guid=05fc02a4ce70399438159a542ce59491&amp;type=3#sign_aq_gate&apos;); width: 264px; height: 276px; left: 391px; top: 526px;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="navigation-enter" class="interactable" style="width: 252px; height: 597px; left: 716px; top: 109px;" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" />
+    </ui:VisualElement>
+</ui:UXML>

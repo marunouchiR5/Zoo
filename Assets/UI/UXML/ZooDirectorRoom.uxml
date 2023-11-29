@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
+    <ui:VisualElement name="zoo-director-room" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_office.png?fileID=2800000&amp;guid=8fa014a67fdc53241ac7a5a06a35852e&amp;type=3#game design_office&apos;);">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="map" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/map.png?fileID=2800000&amp;guid=f085a288f8416bb4d800dc2f5fd59bcc&amp;type=3#map&apos;); width: 266px; height: 166px; left: 87px; top: 492px;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="zoo-director-document" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/document_zoo_director.png?fileID=2800000&amp;guid=1410f3b579b1e2c4b923e1ac5a6283a7&amp;type=3#document_zoo_director&apos;); width: 233px; height: 142px; left: 750px; top: 584px;" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" />
+    </ui:VisualElement>
+</ui:UXML>

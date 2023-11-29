@@ -16,6 +16,8 @@ public class GameViewManager : MonoBehaviour
     [SerializeField] LionArea m_LionArea;
     [SerializeField] ElephantArea m_ElephantArea;
     [SerializeField] MonkeyArea m_MonkeyArea;
+    [SerializeField] ZooDirectorRoom m_ZooDirectorRoom;
+    [SerializeField] AquariumOutside m_AquariumOutside;
 
     [Header("HUDs")]
     [Tooltip("HUDs remain active at all times unless explicitly disabled.")]
@@ -46,7 +48,7 @@ public class GameViewManager : MonoBehaviour
         SetupOverlayViews();
 
         // start new game or load previous game
-        ShowZooGate();
+        ShowZooDirectorRoom();
     }
 
     void Start()
@@ -70,6 +72,12 @@ public class GameViewManager : MonoBehaviour
 
         if (m_MonkeyArea != null)
             m_AllSceneViews.Add(m_MonkeyArea);
+
+        if (m_AquariumOutside != null)
+            m_AllSceneViews.Add(m_AquariumOutside);
+
+        if (m_ZooDirectorRoom != null)
+            m_AllSceneViews.Add(m_ZooDirectorRoom);
     }
 
     // shows one screen at a time
@@ -117,6 +125,18 @@ public class GameViewManager : MonoBehaviour
     {
         ShowSceneView(m_MonkeyArea);
         LocationChanged?.Invoke("Monkey Area");
+    }
+
+    public void ShowAquariumOutside()
+    {
+        ShowSceneView(m_AquariumOutside);
+        LocationChanged?.Invoke("Aquarium Outside");
+    }
+
+    public void ShowZooDirectorRoom()
+    {
+        ShowSceneView(m_ZooDirectorRoom);
+        LocationChanged?.Invoke("Zoo Director Room");
     }
 
     void SetupOverlayViews()
