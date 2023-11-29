@@ -51,7 +51,7 @@ public class GameViewManager : MonoBehaviour
         SetupOverlayViews();
 
         // start new game or load previous game
-        ShowAquariumOutside();
+        ShowZooGate();
     }
 
     void Start()

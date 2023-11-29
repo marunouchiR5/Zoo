@@ -85,7 +85,23 @@ public class RabbitArea : BaseView
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
 
-        GameStateManager.Instance.SetActiveConversationData("RabbitArea", "Navigation");
+        if (!GameStateManager.Instance.Aware)
+        {
+            Task task = GameStateManager.Instance.CurrentTasks[0];
+            if (task.Progress < task.ProgressGoal)
+            {
+                GameStateManager.Instance.SetActiveConversationData("RabbitArea", "NavigationUnawareUnfinished");
+            }
+            else
+            {
+                GameStateManager.Instance.SetActiveConversationData("RabbitArea", "NavigationUnawareFinished");
+            }
+        }
+        else
+        {
+            GameStateManager.Instance.SetActiveConversationData("RabbitArea", "NavigationAware");
+        }
+        
         m_GameViewManager.ShowConversationView();
 
         // Set the delegate to handle option clicks
@@ -95,24 +111,63 @@ public class RabbitArea : BaseView
     // conversation decision options
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        if (!GameStateManager.Instance.Aware)
         {
-            case "Cancel":
-                Cancel();
-                break;
-            case "Go to Monkey Area":
-                GoToMonkeyArea();
-                break;
-            case "Go to Lion Area":
-                GoToLionArea();
-                break;
-            case "Go to Aquarium Entrance":
-                GoToAquariumOutside();
-                break;
-            case "Go to Zoo Gate":
-                GoToZooGate();
-                break;
-                // ... other cases as needed ...
+            Task task = GameStateManager.Instance.CurrentTasks[0];
+            if (task.Progress < task.ProgressGoal)
+            {
+                switch (option.Text)
+                {
+                    case "Cancel":
+                        Cancel();
+                        break;
+                    case "Go to Monkey Area":
+                        GoToMonkeyArea();
+                        break;
+                    case "Go to Lion Area":
+                        GoToLionArea();
+                        break;
+                        // ... other cases as needed ...
+                }
+            }
+            else
+            {
+                switch (option.Text)
+                {
+                    case "Cancel":
+                        Cancel();
+                        break;
+                    case "Go to Monkey Area":
+                        GoToMonkeyArea();
+                        break;
+                    case "Go to Lion Area":
+                        GoToLionArea();
+                        break;
+                    case "Go to Zoo Gate":
+                        GoToZooGate();
+                        break;
+                        // ... other cases as needed ...
+                }
+            }
+        }
+        else
+        {
+            switch (option.Text)
+            {
+                case "Cancel":
+                    Cancel();
+                    break;
+                case "Go to Monkey Area":
+                    GoToMonkeyArea();
+                    break;
+                case "Go to Lion Area":
+                    GoToLionArea();
+                    break;
+                case "Go to Aquarium Entrance":
+                    GoToAquariumOutside();
+                    break;
+                    // ... other cases as needed ...
+            }
         }
     }
 
@@ -151,7 +206,7 @@ public class RabbitArea : BaseView
         
         if (GameStateManager.Instance != null)
         {
-            if (!GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
+            if (!GameStateManager.Instance.Aware && !GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
             {
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }

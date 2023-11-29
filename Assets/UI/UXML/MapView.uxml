@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="map-view" style="flex-grow: 1; width: 1470px; height: 1020px;">
-        <ui:VisualElement name="map-image" style="flex-grow: 1; background-color: rgb(144, 100, 100); background-image: url(&apos;project://database/Assets/UI/Textures/elements/map_early_version.png?fileID=2800000&amp;guid=bbf5bd690f2e7724394e4c35063683da&amp;type=3#map_early_version&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        <ui:VisualElement name="map-image" style="flex-grow: 1; background-color: rgb(144, 100, 100); background-image: url(&apos;project://database/Assets/UI/Textures/elements/map-early-version.png?fileID=2800000&amp;guid=47f47c8a7b312304997783402c0363fb&amp;type=3#map-early-version&apos;); -unity-background-scale-mode: scale-and-crop;" />
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="back--button" style="position: absolute; width: 300px; height: 80px; font-size: 32px; -unity-font-style: bold; right: 40px; bottom: 20px;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -83,7 +83,16 @@ public class ZooGate : BaseView
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
 
-        GameStateManager.Instance.SetActiveConversationData("ZooGate", "Navigation");
+        Task task = GameStateManager.Instance.CurrentTasks[0];
+        if (task.Progress < task.ProgressGoal)
+        {
+            GameStateManager.Instance.SetActiveConversationData("ZooGate", "NavigationUnfinished");
+        }
+        else
+        {
+            GameStateManager.Instance.SetActiveConversationData("ZooGate", "NavigationFinished");
+        }
+
         m_GameViewManager.ShowConversationView();
 
         // Set the delegate to handle option clicks
@@ -93,19 +102,44 @@ public class ZooGate : BaseView
     // conversation decision options
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        Task task = GameStateManager.Instance.CurrentTasks[0];
+        if (task.Progress < task.ProgressGoal)
         {
-            case "Cancel":
-                Cancel();
-                break;
-            case "Go to Rabbit Area":
-                GoToRabbitArea();
-                break;
-            case "Go to Lion Area":
-                GoToLionArea();
-                break;
-                // ... other cases as needed ...
+            switch (option.Text)
+            {
+                case "Cancel":
+                    Cancel();
+                    break;
+                case "Go to Rabbit Area":
+                    GoToRabbitArea();
+                    break;
+                case "Go to Lion Area":
+                    GoToLionArea();
+                    break;
+                    // ... other cases as needed ...
+            }
         }
+        else
+        {
+            switch (option.Text)
+            {
+                case "Cancel":
+                    Cancel();
+                    break;
+                case "Go to Rabbit Area":
+                    GoToRabbitArea();
+                    break;
+                case "Go to Lion Area":
+                    GoToLionArea();
+                    break;
+                case "Escape":
+                    Escape();
+                    break;
+                    // ... other cases as needed ...
+            }
+        }
+
+        
     }
 
     private void Cancel()
@@ -123,6 +157,12 @@ public class ZooGate : BaseView
     {
         m_GameViewManager.ShowLionArea();
         m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void Escape()
+    {
+        Debug.Log("Escaped!");
+        // switch scene
     }
 
     public override void ShowScreen()

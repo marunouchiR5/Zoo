@@ -142,7 +142,7 @@ public class ElephantArea : BaseView
 
         if (GameStateManager.Instance != null)
         {
-            if (!GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
+            if (!GameStateManager.Instance.Aware && !GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
             {
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }

@@ -22,5 +22,6 @@ public enum DecisionAction
     GoToAquariumOutside,
     GoToGuestRoom,
     GoToWhaleArea,
+    Escape,
     // Add other actions as needed
 }

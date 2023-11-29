@@ -18,7 +18,8 @@ public class TaskEntryController
         {
             if (task.HasProgress)
             {
-                label.text = task.Name + " (" + GameStateManager.Instance.VisitedAreas.Count.ToString() + "/" + task.ProgressGoal.ToString() + ")";
+                task.Progress = GameStateManager.Instance.VisitedAreas.Count;
+                label.text = task.Name + " (" + task.Progress.ToString() + "/" + task.ProgressGoal.ToString() + ")";
             }
             else
             {

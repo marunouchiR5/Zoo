@@ -59,7 +59,23 @@ public class LionArea : BaseView
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
 
-        GameStateManager.Instance.SetActiveConversationData("LionArea", "Navigation");
+        if (!GameStateManager.Instance.Aware)
+        {
+            Task task = GameStateManager.Instance.CurrentTasks[0];
+            if (task.Progress < task.ProgressGoal)
+            {
+                GameStateManager.Instance.SetActiveConversationData("LionArea", "NavigationUnawareUnfinished");
+            }
+            else
+            {
+                GameStateManager.Instance.SetActiveConversationData("LionArea", "NavigationUnawareFinished");
+            }
+        }
+        else
+        {
+            GameStateManager.Instance.SetActiveConversationData("LionArea", "NavigationAware");
+        }
+            
         m_GameViewManager.ShowConversationView();
 
         // Set the delegate to handle option clicks
@@ -69,27 +85,72 @@ public class LionArea : BaseView
     // conversation decision options
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        if (!GameStateManager.Instance.Aware)
         {
-            case "Cancel":
-                Cancel();
-                break;
-            case "Go to Rabbit Area":
-                GoToRabbitArea();
-                break;
-            case "Go to Monkey Area":
-                GoToMonkeyArea();
-                break;
-            case "Go to Elephant Area":
-                GoToElephantArea();
-                break;
-            case "Go to Aquarium Entrance":
-                GoToAquariumOutside();
-                break;
-            case "Go to Zoo Gate":
-                GoToZooGate();
-                break;
-                // ... other cases as needed ...
+            Task task = GameStateManager.Instance.CurrentTasks[0];
+            if (task.Progress < task.ProgressGoal)
+            {
+                switch (option.Text)
+                {
+                    case "Cancel":
+                        Cancel();
+                        break;
+                    case "Go to Rabbit Area":
+                        GoToRabbitArea();
+                        break;
+                    case "Go to Monkey Area":
+                        GoToMonkeyArea();
+                        break;
+                    case "Go to Elephant Area":
+                        GoToElephantArea();
+                        break;
+                        // ... other cases as needed ...
+                }
+            }
+            else
+            {
+                switch (option.Text)
+                {
+                    case "Cancel":
+                        Cancel();
+                        break;
+                    case "Go to Rabbit Area":
+                        GoToRabbitArea();
+                        break;
+                    case "Go to Monkey Area":
+                        GoToMonkeyArea();
+                        break;
+                    case "Go to Elephant Area":
+                        GoToElephantArea();
+                        break;
+                    case "Go to Zoo Gate":
+                        GoToZooGate();
+                        break;
+                        // ... other cases as needed ...
+                }
+            }
+        }
+        else
+        {
+            switch (option.Text)
+            {
+                case "Cancel":
+                    Cancel();
+                    break;
+                case "Go to Rabbit Area":
+                    GoToRabbitArea();
+                    break;
+                case "Go to Monkey Area":
+                    GoToMonkeyArea();
+                    break;
+                case "Go to Elephant Area":
+                    GoToElephantArea();
+                    break;
+                case "Go to Aquarium Entrance":
+                    GoToAquariumOutside();
+                    break;
+                    // ... other cases as needed ...
+            }
         }
     }
 
@@ -134,7 +195,7 @@ public class LionArea : BaseView
 
         if (GameStateManager.Instance != null)
         {
-            if (!GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
+            if (!GameStateManager.Instance.Aware && !GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
             {
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }

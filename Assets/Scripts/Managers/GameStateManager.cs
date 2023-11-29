@@ -29,6 +29,7 @@ public class GameStateManager : MonoBehaviour
     public Sprite CurrentProfile { get; set; }
 
     // system related
+    public bool Aware { get; set; }
     public bool ZooGateMapCollected { get; set; }
     public List<string> VisitedAreas;
     public bool BlackClothesCollected { get; set; }
@@ -73,12 +74,6 @@ public class GameStateManager : MonoBehaviour
         string itemPath = $"GameData/Items/EnergyDrink";
         Item initialItem = Resources.Load<Item>(itemPath);
         CurrentInventory.Add(initialItem);
-        //string itemsFolderPath = "GameData/Items";
-        //Item[] items = Resources.LoadAll<Item>(itemsFolderPath);
-        //foreach (var item in items)
-        //{
-        //    CurrentInventory.Add(item);
-        //}
         InventoryUpdated?.Invoke();
 
         // token
@@ -105,6 +100,7 @@ public class GameStateManager : MonoBehaviour
 
         // system related
         VisitedAreas = new List<String> { /* ... */ };
+        Aware = false;
     }
 
     public void SetActiveConversationData(string sceneName, string buttonName)
@@ -122,6 +118,20 @@ public class GameStateManager : MonoBehaviour
     {
         CurrentSanity = Mathf.Min(currentSanity, MaxSanity);
         SanityChanged?.Invoke();
+
+        if (!Aware && CurrentSanity < MaxSanity)
+        {
+            Aware = true;
+
+            // task related
+            string taskPath = $"GameData/Tasks/Aware";
+            Task initialTask = Resources.Load<Task>(taskPath);
+            CurrentTasks.Clear();
+            CurrentTasks.Add(initialTask);
+            TaskUpdated?.Invoke();
+        }
+
+        // player profile related
     }
 
     public void AddRuleSet(RuleSet ruleSetToAdd)
