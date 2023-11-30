@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <ui:Template name="BlackClothedStaff" src="project://database/Assets/UI/UXML/BlackClothedStaff.uxml?fileID=9197481963319205126&amp;guid=da1b943fd4732eb44afa5aee7bd2a3db&amp;type=3#BlackClothedStaff" />
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="aquarium-inside" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_jellyfish.png?fileID=2800000&amp;guid=b059a1abe0612fb448aed016685d1c69&amp;type=3#game design_jellyfish&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="notice-inside" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_aq_inside.png?fileID=2800000&amp;guid=413ab63a0a43eef4ea1b23ef70b9300c&amp;type=3#sign_aq_inside&apos;); width: 269px; height: 282px; left: 765px; top: 487px;" />
@@ -11,6 +12,7 @@
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="jellyfish4" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/jellyfish4.png?fileID=2800000&amp;guid=80f95215f47fe0b43872e8e8f6858fa5&amp;type=3#jellyfish4&apos;); width: 143px; height: 173px; left: 791px; top: 192px;" />
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="jellyfish5" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/jellyfish5.png?fileID=2800000&amp;guid=ac73289064d82744da74cad79d4762ab&amp;type=3#jellyfish5&apos;); width: 158px; height: 128px; left: 968px; top: 332px;" />
         </ui:VisualElement>
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
+        <ui:Instance template="BlackClothedStaff" name="BlackClothedStaff" />
     </ui:VisualElement>
 </ui:UXML>

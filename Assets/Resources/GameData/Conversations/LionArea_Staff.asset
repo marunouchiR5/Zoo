@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec59d4508d6a3148858e6d2deb998b0, type: 3}
+  m_Name: LionArea_Staff
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: Blue-Clothed Staff
+    Content: "Welcome to the lion area. Don\u2019t be frightened, you\u2019re always
+      safe here. If you ever need help in the zoo, please come back to us."
+    Options: []
+  - Speaker: Me
+    Content: The lions are white.
+    Options: []
+  - Speaker: Blue-Clothed Staff
+    Content: Yes, we have four gorgeous white lions which I bet you have never seen
+      before. They are lions, but they are the most friendly animals in the zoo.
+    Options: []

@@ -3,6 +3,6 @@
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="whale-area" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_whale.png?fileID=2800000&amp;guid=76a40dd382e76fb47a3a87dea5e1b576&amp;type=3#game design_whale&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="whale" class="interactable" style="position: absolute; background-image: url(&apos;project://database/Assets/UI/Textures/elements/elephant_drown.png?fileID=2800000&amp;guid=785c4a16a62ab2341b0033be6c480d34&amp;type=3#elephant_drown&apos;); width: 937px; height: 506px; left: 254px; top: 212px;" />
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
     </ui:VisualElement>
 </ui:UXML>

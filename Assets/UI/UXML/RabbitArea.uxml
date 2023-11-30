@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <ui:Template name="BlackClothedStaff" src="project://database/Assets/UI/UXML/BlackClothedStaff.uxml?fileID=9197481963319205126&amp;guid=da1b943fd4732eb44afa5aee7bd2a3db&amp;type=3#BlackClothedStaff" />
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="rabbit-area" style="flex-grow: 1; width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_rabbit.png?fileID=2800000&amp;guid=7603be3e0dd21a546b8f1a0a888b3a40&amp;type=3#game design_rabbit&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="bench" class="interactable" style="width: 332px; height: 180px; left: 387px; top: 599px; background-image: url(&apos;project://database/Assets/UI/Textures/elements/chair_for_sitting_in_shade.png?fileID=2800000&amp;guid=57bf3d38d863b3149b73d11b698d1141&amp;type=3#chair_for_sitting_in_shade&apos;);" />
@@ -9,6 +10,7 @@
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="rabbit3" class="interactable" style="width: 132px; height: 138px; background-image: url(&apos;project://database/Assets/UI/Textures/elements/rabbit3.png?fileID=2800000&amp;guid=574b87f8c314790409421f356ff7f729&amp;type=3#rabbit3&apos;); left: 918px; top: 321px;" />
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="rabbit4" class="interactable" style="width: 132px; height: 138px; background-image: url(&apos;project://database/Assets/UI/Textures/elements/rabbit4.png?fileID=2800000&amp;guid=b7e770147dc494246920fe82c78d7d7d&amp;type=3#rabbit4&apos;); left: 1206px; top: 342px;" />
         </ui:VisualElement>
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
+        <ui:Instance template="BlackClothedStaff" name="BlackClothedStaff" />
     </ui:VisualElement>
 </ui:UXML>

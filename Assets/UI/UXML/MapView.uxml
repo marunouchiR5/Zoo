@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="map-view" style="flex-grow: 1; width: 1470px; height: 1020px;">
         <ui:VisualElement name="map-image" style="flex-grow: 1; background-color: rgb(144, 100, 100); background-image: url(&apos;project://database/Assets/UI/Textures/elements/map-early-version.png?fileID=2800000&amp;guid=47f47c8a7b312304997783402c0363fb&amp;type=3#map-early-version&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="map-corner" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/map-corner.png?fileID=2800000&amp;guid=052bb94ed07cee445b604d42b4f57a57&amp;type=3#map-corner&apos;); width: 300px; height: 300px; position: absolute; right: 0; top: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="back--button" style="position: absolute; width: 300px; height: 80px; font-size: 32px; -unity-font-style: bold; right: 40px; bottom: 20px;" />
     </ui:VisualElement>
 </ui:UXML>

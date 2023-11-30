@@ -11,10 +11,12 @@ public class ZooGate : BaseView
     const string k_VisitorGuidelinesName = "visitor-guidelines";
     const string k_MapName = "map";
     const string k_NavigationName = "navigation";
+    const string k_Staff = "staff";
 
     Button m_VisitorGuidelines;
     Button m_Map;
     Button m_Navigation;
+    Button m_Staff;
 
     private void OnEnable()
     {
@@ -32,6 +34,7 @@ public class ZooGate : BaseView
         m_VisitorGuidelines = m_Screen.Q<Button>(k_VisitorGuidelinesName);
         m_Map = m_Screen.Q<Button>(k_MapName);
         m_Navigation = m_Screen.Q<Button>(k_NavigationName);
+        m_Staff = m_Screen.Q<Button>(k_Staff);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -39,6 +42,7 @@ public class ZooGate : BaseView
         m_VisitorGuidelines?.RegisterCallback<ClickEvent>(ClickVisitorGuidelines);
         m_Map?.RegisterCallback<ClickEvent>(ClickMap);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
+        m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
     }
 
     private void ClickVisitorGuidelines(ClickEvent evt)
@@ -163,6 +167,15 @@ public class ZooGate : BaseView
     {
         Debug.Log("Escaped!");
         // switch scene
+    }
+
+    private void ClickStaff(ClickEvent evt)
+    {
+        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetActiveConversationData("ZooGate", "Staff");
+        m_GameViewManager.ShowConversationView();
+
+        // state related
     }
 
     public override void ShowScreen()

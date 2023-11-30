@@ -1,11 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <ui:Template name="BlackClothedStaff" src="project://database/Assets/UI/UXML/BlackClothedStaff.uxml?fileID=9197481963319205126&amp;guid=da1b943fd4732eb44afa5aee7bd2a3db&amp;type=3#BlackClothedStaff" />
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="elephant-area" style="flex-grow: 1; width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_elephant-06.png?fileID=2800000&amp;guid=18dfbd563bdb9274cb87095092f6ceb8&amp;type=3#game design_elephant-06&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="elephant" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/elephant.png?fileID=2800000&amp;guid=fb20f0f73087fc441864826cc87fa788&amp;type=3#elephant&apos;); width: 366px; height: 486px; left: 542px; top: 234px;" />
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="sign" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/sign_normal_elephant.png?fileID=2800000&amp;guid=de72c5884e32b2348b88300ba82b1c7e&amp;type=3#sign_normal_elephant&apos;); width: 241px; height: 252px; left: 235px; top: 542px;" />
         <ui:VisualElement name="security-room" style="width: 175px; height: 312px; background-image: url(&apos;project://database/Assets/UI/Textures/elements/door_security.png?fileID=2800000&amp;guid=12fc26b4245680e43839902bfe48a9ed&amp;type=3#door_security&apos;); left: 1207px; top: 291px; position: absolute;" />
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="security-room-note" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/note_security.png?fileID=2800000&amp;guid=a492456ceb46a8c4ab2a9c1a422b38b6&amp;type=3#note_security&apos;); width: 62px; height: 77px; left: 1238px; top: 365px;" />
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
+        <ui:Instance template="BlackClothedStaff" name="BlackClothedStaff" />
     </ui:VisualElement>
 </ui:UXML>

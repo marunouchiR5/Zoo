@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <ui:Template name="BlueClothedStaff" src="project://database/Assets/UI/UXML/BlueClothedStaff.uxml?fileID=9197481963319205126&amp;guid=3258923831b04d047a2ca606d4cad3f7&amp;type=3#BlueClothedStaff" />
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="lion-area" style="flex-grow: 1; width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_lion.png?fileID=2800000&amp;guid=1d24419e4c9e4ba43885ff14c96133fc&amp;type=3#game design_lion&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="white-lion2" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/lion2.png?fileID=2800000&amp;guid=763129faf4ee75c4fba944447363fbb4&amp;type=3#lion2&apos;); width: 317px; height: 199px; left: 289px; top: 354px;" />
@@ -7,6 +8,7 @@
         <ui:VisualElement name="scenery-mountain" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/scenery_mountain.png?fileID=2800000&amp;guid=32617e65c2f3019489e17e79139fcf0e&amp;type=3#scenery_mountain&apos;); position: absolute; width: 1099px; height: 323px; left: 207px; top: 328px; overflow: hidden;" />
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="white-lion1" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/lion1.png?fileID=2800000&amp;guid=ae95e1434a8258d4297b1bacb6809ec3&amp;type=3#lion1&apos;); width: 302px; height: 207px; left: 191px; top: 493px;" />
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="white-lion3" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/lion3.png?fileID=2800000&amp;guid=0bed2507f38312044b05d24fac340001&amp;type=3#lion3&apos;); width: 340px; height: 177px; left: 645px; top: 493px;" />
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
+        <ui:Instance template="BlueClothedStaff" name="BlueClothedStaff" />
     </ui:VisualElement>
 </ui:UXML>

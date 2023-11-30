@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="SceneView" src="project://database/Assets/UI/UXML/SceneView.uxml?fileID=9197481963319205126&amp;guid=68dac7abbfc682346bd774d5d487b81b&amp;type=3#SceneView" />
     <ui:Template name="ConversationView" src="project://database/Assets/UI/UXML/ConversationView.uxml?fileID=9197481963319205126&amp;guid=9edf919ae9b2f274c9696d5cd334d0cb&amp;type=3#ConversationView" />
-    <ui:Template name="LogView" src="project://database/Assets/UI/UXML/LogView.uxml?fileID=9197481963319205126&amp;guid=f48b41c421f6eec479deb88744a5b543&amp;type=3#LogView" />
     <ui:Template name="ShopView" src="project://database/Assets/UI/UXML/ShopView.uxml?fileID=9197481963319205126&amp;guid=ed4aaaee45ee5474b85622729689cecf&amp;type=3#ShopView" />
     <ui:Template name="ItemInspectView" src="project://database/Assets/UI/UXML/ItemInspectView.uxml?fileID=9197481963319205126&amp;guid=b807ea89acae57d4abb49f64daa843ae&amp;type=3#ItemInspectView" />
     <ui:Template name="MapView" src="project://database/Assets/UI/UXML/MapView.uxml?fileID=9197481963319205126&amp;guid=6ca0d519cadcefb4987129561f79e8ea&amp;type=3#MapView" />
     <ui:Template name="RulesView" src="project://database/Assets/UI/UXML/RulesView.uxml?fileID=9197481963319205126&amp;guid=0fb03f18f7650314c8909c9736ebc510&amp;type=3#RulesView" />
+    <ui:Template name="LogView" src="project://database/Assets/UI/UXML/LogView.uxml?fileID=9197481963319205126&amp;guid=f48b41c421f6eec479deb88744a5b543&amp;type=3#LogView" />
     <Style src="project://database/Assets/UI/USS/ConversationView.uss?fileID=7433441132597879392&amp;guid=cab8315123d424941adec9e8bcc4a5db&amp;type=3#ConversationView" />
     <ui:VisualElement name="MainGameView" style="flex-grow: 1;">
         <ui:Instance template="SceneView" name="SceneView" style="position: absolute; display: flex;" />

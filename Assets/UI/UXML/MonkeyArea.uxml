@@ -1,9 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="NavigationButton" src="project://database/Assets/UI/UXML/NavigationButton.uxml?fileID=9197481963319205126&amp;guid=57e1b810f7e0a1644974c778e0627430&amp;type=3#NavigationButton" />
+    <ui:Template name="BlackClothedStaff" src="project://database/Assets/UI/UXML/BlackClothedStaff.uxml?fileID=9197481963319205126&amp;guid=da1b943fd4732eb44afa5aee7bd2a3db&amp;type=3#BlackClothedStaff" />
     <Style src="project://database/Assets/UI/USS/SceneView.uss?fileID=7433441132597879392&amp;guid=195d2fa7040d0bd4ab7ac7f1f025bb40&amp;type=3#SceneView" />
     <ui:VisualElement name="monkey-area" style="width: 1470px; height: 1020px; background-image: url(&apos;project://database/Assets/UI/Textures/background/game%20design_monkey-03.png?fileID=2800000&amp;guid=f8017fb0750c3e4409736435d6f557c9&amp;type=3#game design_monkey-03&apos;); -unity-background-scale-mode: scale-and-crop;">
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="monkey1" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/monkey1.png?fileID=2800000&amp;guid=a7ff857d565466a4384b50c576b072f7&amp;type=3#monkey1&apos;); width: 326px; height: 402px; left: 334px; top: 15px;" />
         <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="monkey2" class="interactable" style="background-image: url(&apos;project://database/Assets/UI/Textures/elements/monkey2.png?fileID=2800000&amp;guid=41745ddaea1374848b7b852365b1742b&amp;type=3#monkey2&apos;); width: 279px; height: 238px; left: 659px; top: 396px;" />
-        <ui:Instance template="NavigationButton" name="NavigationButton" />
+        <ui:Instance template="NavigationButton" name="NavigationButton" style="position: absolute;" />
+        <ui:Instance template="BlackClothedStaff" name="BlackClothedStaff" />
     </ui:VisualElement>
 </ui:UXML>

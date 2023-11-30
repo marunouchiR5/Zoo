@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec59d4508d6a3148858e6d2deb998b0, type: 3}
+  m_Name: MonkeyArea_Staff
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: Black-Clothed Staff
+    Content: Welcome to the monkey area. Take a look at all these lovely monkeys.
+      There is only one road to exit the area. If you ever get lost or see anything
+      abnormal, please let us know.
+    Options: []
+  - Speaker: Me
+    Content: "Well, it\u2019s a very small space to get lost... I mean, thanks."
+    Options: []

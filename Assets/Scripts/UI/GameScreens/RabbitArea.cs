@@ -11,6 +11,7 @@ public class RabbitArea : BaseView
     const string k_RabbitInside2 = "rabbit3";
     const string k_RabbitInside3 = "rabbit4";
     const string k_Navigation = "navigation";
+    const string k_Staff = "staff";
 
     Button m_Bench;
     Button m_RabbitOutside;
@@ -18,6 +19,7 @@ public class RabbitArea : BaseView
     Button m_RabbitInside2;
     Button m_RabbitInside3;
     Button m_Navigation;
+    Button m_Staff;
 
     private void OnEnable()
     {
@@ -38,6 +40,7 @@ public class RabbitArea : BaseView
         m_RabbitInside2 = m_Screen.Q<Button>(k_RabbitInside2);
         m_RabbitInside3 = m_Screen.Q<Button>(k_RabbitInside3);
         m_Navigation = m_Screen.Q<Button>(k_Navigation);
+        m_Staff = m_Screen.Q<Button>(k_Staff);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -48,6 +51,7 @@ public class RabbitArea : BaseView
         m_RabbitInside2?.RegisterCallback<ClickEvent>(InteractRabbitInside);
         m_RabbitInside3?.RegisterCallback<ClickEvent>(InteractRabbitInside);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
+        m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
     }
 
     private void InteractBench(ClickEvent evt)
@@ -75,10 +79,36 @@ public class RabbitArea : BaseView
     private void InteractRabbitInside(ClickEvent evt)
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
-        GameStateManager.Instance.SetActiveConversationData("RabbitArea", "RabbitInside");
+
+        if (GameStateManager.Instance.IsCurrentBodyEquipment("Black Clothes") && GameStateManager.Instance.Aware && GameStateManager.Instance.HasItem("MapCorner"))
+        {
+            GameStateManager.Instance.SetActiveConversationData("RabbitArea", "RabbitInsideCanFeed");
+
+            // Set the delegate to handle option clicks
+            m_GameViewManager.ConversationView.OnOptionClicked = HandleFeedRabbitOptionClick;
+        }
+        else
+        {
+            GameStateManager.Instance.SetActiveConversationData("RabbitArea", "RabbitInside");
+        }
+        
         m_GameViewManager.ShowConversationView();
 
         // state related
+    }
+
+    private void HandleFeedRabbitOptionClick(DecisionOption option)
+    {
+        switch (option.Text)
+        {
+            case "Cancel":
+                Cancel();
+                break;
+            case "Feed Map Corner":
+                FeedMapCorner();
+                break;
+                // ... other cases as needed ...
+        }
     }
 
     private void ClickNavigation(ClickEvent evt)
@@ -198,6 +228,24 @@ public class RabbitArea : BaseView
     {
         m_GameViewManager.ShowZooGate();
         m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void FeedMapCorner()
+    {
+        // use map corner in inventory
+        GameStateManager.Instance.RemoveItem("MapCorner");
+        GameStateManager.Instance.MapCornerFed = true;
+
+        m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void ClickStaff(ClickEvent evt)
+    {
+        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetActiveConversationData("RabbitArea", "Staff");
+        m_GameViewManager.ShowConversationView();
+
+        // state related
     }
 
     public override void ShowScreen()

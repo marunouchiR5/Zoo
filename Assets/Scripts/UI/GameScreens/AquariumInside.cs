@@ -16,6 +16,7 @@ public class AquariumInside : BaseView
     const string k_Jellyfish4 = "jellyfish4";
     const string k_Jellyfish5 = "jellyfish5";
     const string k_Navigation = "navigation";
+    const string k_Staff = "staff";
 
     Button m_NoticeInside;
     Button m_GuestRoomDoor;
@@ -25,6 +26,7 @@ public class AquariumInside : BaseView
     Button m_Jellyfish4;
     Button m_Jellyfish5;
     Button m_Navigation;
+    Button m_Staff;
 
     private void OnEnable()
     {
@@ -47,6 +49,7 @@ public class AquariumInside : BaseView
         m_Jellyfish4 = m_Screen.Q<Button>(k_Jellyfish4);
         m_Jellyfish5 = m_Screen.Q<Button>(k_Jellyfish5);
         m_Navigation = m_Screen.Q<Button>(k_Navigation);
+        m_Staff = m_Screen.Q<Button>(k_Staff);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -59,6 +62,7 @@ public class AquariumInside : BaseView
         m_Jellyfish4?.RegisterCallback<ClickEvent>(InteractJellyfish);
         m_Jellyfish5?.RegisterCallback<ClickEvent>(InteractJellyfish);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
+        m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
     }
 
     private void ClickNoticeInside(ClickEvent evt)
@@ -163,6 +167,15 @@ public class AquariumInside : BaseView
     {
         m_GameViewManager.ShowWhaleArea();
         m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void ClickStaff(ClickEvent evt)
+    {
+        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetActiveConversationData("AquariumInside", "Staff");
+        m_GameViewManager.ShowConversationView();
+
+        // state related
     }
 
     public override void ShowScreen()

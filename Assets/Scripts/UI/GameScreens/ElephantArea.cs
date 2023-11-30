@@ -12,11 +12,13 @@ public class ElephantArea : BaseView
     const string k_Sign = "sign";
     const string k_SecurityRoomNote = "security-room-note";
     const string k_Navigation = "navigation";
+    const string k_Staff = "staff";
 
     Button m_Elephant;
     Button m_Sign;
     Button m_SecurityRoomNote;
     Button m_Navigation;
+    Button m_Staff;
 
     private void OnEnable()
     {
@@ -35,6 +37,7 @@ public class ElephantArea : BaseView
         m_Sign = m_Screen.Q<Button>(k_Sign);
         m_SecurityRoomNote = m_Screen.Q<Button>(k_SecurityRoomNote);
         m_Navigation = m_Screen.Q<Button>(k_Navigation);
+        m_Staff = m_Screen.Q<Button>(k_Staff);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -43,6 +46,7 @@ public class ElephantArea : BaseView
         m_Sign?.RegisterCallback<ClickEvent>(InteractSign);
         m_SecurityRoomNote?.RegisterCallback<ClickEvent>(ClickSecurityRoomNote);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
+        m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
     }
 
     private void InteractElephant(ClickEvent evt)
@@ -134,6 +138,15 @@ public class ElephantArea : BaseView
     {
         m_GameViewManager.ShowZooDirectorRoom();
         m_GameViewManager.ConversationView.HideScreen();
+    }
+
+    private void ClickStaff(ClickEvent evt)
+    {
+        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetActiveConversationData("ElephantArea", "Staff");
+        m_GameViewManager.ShowConversationView();
+
+        // state related
     }
 
     public override void ShowScreen()

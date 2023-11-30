@@ -76,7 +76,9 @@ public class AquariumOutside : BaseView
             GameStateManager.Instance.BlackClothesCollected = true;
 
             // item related
-
+            // add black clothes to inventory
+            string itemPath = $"GameData/Items/BlackClothes";
+            GameStateManager.Instance.AddItem(itemPath);
         }
         else
         {

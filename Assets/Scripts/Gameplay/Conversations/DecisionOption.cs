@@ -23,5 +23,9 @@ public enum DecisionAction
     GoToGuestRoom,
     GoToWhaleArea,
     Escape,
+    TearMap,
+    FeedMapCorner,
+    GoLeft,
+    GoRight,
     // Add other actions as needed
 }
