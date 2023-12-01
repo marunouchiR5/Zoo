@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/USS/RulesView.uss?fileID=7433441132597879392&amp;guid=97fd0244303d4374f889e71199d675c3&amp;type=3#RulesView" />
-    <ui:VisualElement name="rules-view" style="flex-grow: 1; width: 1470px; height: 1020px;">
+    <ui:VisualElement name="rules-view" style="flex-grow: 1; width: 1470px; height: 1020px; background-color: rgba(0, 0, 0, 0.75);">
         <ui:Label tabindex="-1" text="Collected Rules" parse-escape-sequences="true" display-tooltip-when-elided="true" name="collected-rules--label" style="font-size: 24px; color: rgb(255, 255, 255); -unity-font-style: bold; margin-left: 180px; margin-top: 100px;" />
         <ui:ListView focusable="true" name="rules-list-view" style="margin-left: 180px; width: 800px; height: 740px; background-color: rgb(217, 217, 217); margin-top: 50px;" />
         <ui:Button text="Read" parse-escape-sequences="true" display-tooltip-when-elided="true" name="read--button" class="rules-button" style="bottom: 120px;" />

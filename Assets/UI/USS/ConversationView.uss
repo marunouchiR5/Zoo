@@ -9,8 +9,8 @@
     -unity-font-style: bold;
     -unity-text-align: middle-center;
     right: 70px;
-    bottom: -855px;
     position: absolute;
+    bottom: 170px;
 }
 
 .option-button {
@@ -64,14 +64,14 @@
     width: 1000px;
     height: 250px;
     font-size: 32px;
-    background-color: rgba(217, 217, 217, 1);
+    background-color: rgb(217, 217, 217);
 }
 
 #conversation-area:hover {
-    background-color: rgba(227, 227, 227, 1);
+    background-color: rgb(227, 227, 227);
 }
 
 #conversation-area:disabled {
-    background-color: rgba(217, 217, 217, 1); /* Maintain the same background color */
-    opacity: 1; /* Override default dimming */
+    background-color: rgb(217, 217, 217);
+    opacity: 1;
 }
