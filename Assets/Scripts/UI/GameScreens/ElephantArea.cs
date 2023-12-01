@@ -8,12 +8,14 @@ public class ElephantArea : BaseView
     [Header("Rule Set to be Collected")]
     [SerializeField] RuleSet m_Rules;
 
+    const string k_Background = "elephant-area";
     const string k_Elephant = "elephant";
     const string k_Sign = "sign";
     const string k_SecurityRoomNote = "security-room-note";
     const string k_Navigation = "navigation";
     const string k_Staff = "staff";
 
+    VisualElement m_Background;
     Button m_Elephant;
     Button m_Sign;
     Button m_SecurityRoomNote;
@@ -22,17 +24,20 @@ public class ElephantArea : BaseView
 
     private void OnEnable()
     {
-
+        GameStateManager.BecameAware += OnBecameAware;
+        GameStateManager.NewGameStarted += OnNewGameStarted;
     }
 
     private void OnDisable()
     {
-
+        GameStateManager.BecameAware -= OnBecameAware;
+        GameStateManager.NewGameStarted -= OnNewGameStarted;
     }
 
     protected override void SetVisualElements()
     {
         base.SetVisualElements();
+        m_Background = m_Screen.Q(k_Background);
         m_Elephant = m_Screen.Q<Button>(k_Elephant);
         m_Sign = m_Screen.Q<Button>(k_Sign);
         m_SecurityRoomNote = m_Screen.Q<Button>(k_SecurityRoomNote);
@@ -61,10 +66,21 @@ public class ElephantArea : BaseView
     private void InteractSign(ClickEvent evt)
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
-        GameStateManager.Instance.SetActiveConversationData("ElephantArea", "Sign");
-        m_GameViewManager.ShowConversationView();
 
-        // state related
+        if (GameStateManager.Instance.Aware)
+        {
+            GameStateManager.Instance.SetActiveConversationData("ElephantArea", "SignAware");
+            m_GameViewManager.ShowConversationView();
+
+            // state related
+            int currentSanity = GameStateManager.Instance.CurrentSanity;
+            GameStateManager.Instance.UpdateSanity(currentSanity - 1);
+        }
+        else
+        {
+            GameStateManager.Instance.SetActiveConversationData("ElephantArea", "Sign");
+            m_GameViewManager.ShowConversationView();
+        }
     }
 
     private void ClickSecurityRoomNote(ClickEvent evt)
@@ -160,5 +176,72 @@ public class ElephantArea : BaseView
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }
         }
+    }
+
+    // event-handling methods
+    private void OnBecameAware()
+    {
+        // Load the new background image
+        Texture2D newBackgroundTexture = Resources.Load<Texture2D>("UI/Textures/background/game design_elephant-07");
+        if (newBackgroundTexture == null)
+        {
+            Debug.LogError("Failed to load new background texture.");
+            return;
+        }
+        // Apply the new background image to m_Background
+        m_Background.style.backgroundImage = new StyleBackground(newBackgroundTexture);
+
+        // Load the new elephant image
+        Texture2D newElephantTexture = Resources.Load<Texture2D>("UI/Textures/elements/elephant_rabbit_ear");
+        if (newElephantTexture == null)
+        {
+            Debug.LogError("Failed to load new elephant texture.");
+            return;
+        }
+        // Apply the new background image to m_Elephant
+        m_Elephant.style.backgroundImage = new StyleBackground(newElephantTexture);
+
+        // Load the new sign image
+        Texture2D newSignTexture = Resources.Load<Texture2D>("UI/Textures/elements/sign_rabbit_elephant");
+        if (newSignTexture == null)
+        {
+            Debug.LogError("Failed to load new sign texture.");
+            return;
+        }
+        // Apply the new background image to m_Sign
+        m_Sign.style.backgroundImage = new StyleBackground(newSignTexture);
+    }
+
+    private void OnNewGameStarted()
+    {
+        // Load the new background image
+        Texture2D newBackgroundTexture = Resources.Load<Texture2D>("UI/Textures/background/game design_elephant-06");
+        if (newBackgroundTexture == null)
+        {
+            Debug.LogError("Failed to load new background texture.");
+            return;
+        }
+        // Apply the new background image to m_Background
+        m_Background.style.backgroundImage = new StyleBackground(newBackgroundTexture);
+
+        // Load the new elephant image
+        Texture2D newElephantTexture = Resources.Load<Texture2D>("UI/Textures/elements/elephant");
+        if (newElephantTexture == null)
+        {
+            Debug.LogError("Failed to load new elephant texture.");
+            return;
+        }
+        // Apply the new background image to m_Elephant
+        m_Elephant.style.backgroundImage = new StyleBackground(newElephantTexture);
+
+        // Load the new sign image
+        Texture2D newSignTexture = Resources.Load<Texture2D>("UI/Textures/elements/sign_normal_elephant");
+        if (newSignTexture == null)
+        {
+            Debug.LogError("Failed to load new sign texture.");
+            return;
+        }
+        // Apply the new background image to m_Sign
+        m_Sign.style.backgroundImage = new StyleBackground(newSignTexture);
     }
 }

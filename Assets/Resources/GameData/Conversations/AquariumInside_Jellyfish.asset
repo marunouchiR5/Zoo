@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: Jellyfish...
+    Content: These creatures seem unaffected by the zoo's strangeness. Comforting,
+      in a way.
     Options: []

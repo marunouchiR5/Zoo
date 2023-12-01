@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: The right way wasn't here before...
+    Content: The left way seems like the safe choice. The guidelines were clear about
+      this.
     Options: []
+  - Speaker: 
+    Content: But the right way wasn't here before. Should I risk it?
+    Options:
+    - Text: Cancel
+      Action: 0
+    - Text: Go Left
+      Action: 14
+    - Text: Go Right
+      Action: 15
   - Speaker: 
     Content: Where should I go now?
     Options:

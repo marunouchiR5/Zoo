@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: I love the lights...
+    Content: There's something calming about this light. It eases my mind.
     Options: []

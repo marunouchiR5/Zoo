@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: Visitor Guidelines Collected
+    Content: These rules seem unusually specific. Better keep them in mind.
     Options: []

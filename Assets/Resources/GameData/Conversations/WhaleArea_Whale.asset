@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: A drowned elephant...
+    Content: "A drown elephant\u2026 am I getting mad? The notice said it\u2019s
+      just a hologram. Can a hologram be this real\u2026"
     Options: []

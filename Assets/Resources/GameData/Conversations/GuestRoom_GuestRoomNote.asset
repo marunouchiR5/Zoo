@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: Guest Room Note Collected.
+    Content: Someone else was here. Their words might guide me... or mislead me.
     Options: []

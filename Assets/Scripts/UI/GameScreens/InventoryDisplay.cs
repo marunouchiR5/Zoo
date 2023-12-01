@@ -59,8 +59,15 @@ public class InventoryDisplay : HUD
         // Set up bind function for a specific task entry
         m_InventoryList.bindItem = (item, index) =>
         {
-            var itemEntryController = item.userData as ItemEntryController;
-            itemEntryController.SetItemData(inventoryList[index], OpenItemInspectView);
+            if (index >= 0 && index < inventoryList.Count)
+            {
+                var itemEntryController = item.userData as ItemEntryController;
+                itemEntryController.SetItemData(inventoryList[index], OpenItemInspectView);
+            }
+            else
+            {
+                Debug.LogError($"Invalid index: {index}. Inventory list size: {inventoryList.Count}");
+            }
         };
 
         // Optionally set a fixed item height

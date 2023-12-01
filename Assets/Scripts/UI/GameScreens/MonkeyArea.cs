@@ -21,11 +21,13 @@ public class MonkeyArea : BaseView
     private void OnEnable()
     {
         GameStateManager.BecameAware += OnBecameAware;
+        GameStateManager.NewGameStarted += OnNewGameStarted;
     }
 
     private void OnDisable()
     {
         GameStateManager.BecameAware -= OnBecameAware;
+        GameStateManager.NewGameStarted -= OnNewGameStarted;
     }
 
     protected override void SetVisualElements()
@@ -202,7 +204,21 @@ public class MonkeyArea : BaseView
     private void OnBecameAware()
     {
         // Load the new background image
-        Texture2D newBackgroundTexture = Resources.Load<Texture2D>("UI/Textures/game design_monkey-04");
+        Texture2D newBackgroundTexture = Resources.Load<Texture2D>("UI/Textures/background/game design_monkey-04");
+        if (newBackgroundTexture == null)
+        {
+            Debug.LogError("Failed to load new background texture.");
+            return;
+        }
+
+        // Apply the new background image to m_Background
+        m_Background.style.backgroundImage = new StyleBackground(newBackgroundTexture);
+    }
+
+    private void OnNewGameStarted()
+    {
+        // Load the new background image
+        Texture2D newBackgroundTexture = Resources.Load<Texture2D>("UI/Textures/background/game design_monkey-03");
         if (newBackgroundTexture == null)
         {
             Debug.LogError("Failed to load new background texture.");

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: A sign showing an elephant...
+    Content: This looks like normal elephants to me.
     Options: []

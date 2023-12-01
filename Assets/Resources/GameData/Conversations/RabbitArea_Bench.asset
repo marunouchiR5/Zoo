@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: "I can hear someone\u2019s laughter..."
+    Content: A good spot to rest, but something feels off here.
     Options: []

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: I can hear someone's laughter...
+    Content: Was that laughter? From a rabbit? That can't be normal.
     Options: []

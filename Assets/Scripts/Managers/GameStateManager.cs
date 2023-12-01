@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
 
 public class GameStateManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class GameStateManager : MonoBehaviour
     public static event Action RuleSetCollected;
     public static event Action BecameAware;
     public static event Action GameOver;
+    public static event Action NewGameStarted;
 
     public static GameStateManager Instance { get; private set; }
 
@@ -49,17 +51,21 @@ public class GameStateManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional, to persist across scenes
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else if (Instance != this)
         {
-            Destroy(gameObject); // Optional, destroys any duplicate instances
+            Destroy(gameObject);
         }
     }
 
-    private void Start()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StartNewGame();
+        if (scene.name == "Game")
+        {
+            StartNewGame();
+        }
     }
 
     public void StartNewGame()
@@ -109,6 +115,7 @@ public class GameStateManager : MonoBehaviour
         ZooDirectorRoomMapCollected = false;
         JellyfishLightUsed = false;
         MapCornerFed = false;
+        NewGameStarted?.Invoke();
     }
 
     public void SetActiveConversationData(string sceneName, string buttonName)

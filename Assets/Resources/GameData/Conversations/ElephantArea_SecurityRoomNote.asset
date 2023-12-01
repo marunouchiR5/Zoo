@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: Security Room Note Collected
+    Content: This note... it's like a warning. Should I be worried?
     Options: []

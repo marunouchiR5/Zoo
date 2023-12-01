@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Elements:
   - Speaker: 
-    Content: Map Collected
+    Content: This map might be key to navigating this place. Should keep it handy.
     Options: []
