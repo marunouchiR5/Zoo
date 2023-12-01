@@ -115,18 +115,18 @@ public class ElephantArea : BaseView
     // conversation decision options
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go to Monkey Area":
+            case DecisionAction.GoToMonkeyArea:
                 GoToMonkeyArea();
                 break;
-            case "Go to Lion Area":
+            case DecisionAction.GoToLionArea:
                 GoToLionArea();
                 break;
-            case "Go to Zoo Director's Room":
+            case DecisionAction.GoToZooDirectorRoom:
                 GoToZooDirectorRoom();
                 break;
                 // ... other cases as needed ...

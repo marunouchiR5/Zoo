@@ -93,12 +93,12 @@ public class ZooDirectorRoom : BaseView
     // conversation decision options
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go to Elephant Area":
+            case DecisionAction.GoToElephantArea:
                 GoToElephantArea();
                 break;
                 // ... other cases as needed ...

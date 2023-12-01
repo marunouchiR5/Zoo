@@ -117,12 +117,12 @@ public class AquariumInside : BaseView
     // conversation decision options
     private void HandleGuestRoomDoorOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go Inside":
+            case DecisionAction.GoToGuestRoom:
                 GoToGuestRoom();
                 break;
                 // ... other cases as needed ...
@@ -131,15 +131,15 @@ public class AquariumInside : BaseView
 
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go to Aquarium Entrance":
+            case DecisionAction.GoToAquariumOutside:
                 GoToAquariumOutside();
                 break;
-            case "Go to Whale Area":
+            case DecisionAction.GoToWhaleArea:
                 GoToWhaleArea();
                 break;
                 // ... other cases as needed ...

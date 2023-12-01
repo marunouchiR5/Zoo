@@ -21,7 +21,7 @@ MonoBehaviour:
     Options:
     - Text: Cancel
       Action: 0
-    - Text: Go to Monkey Area
+    - Text: Monkey Area
       Action: 3
-    - Text: Go to Lion Area
+    - Text: Lion Area
       Action: 2

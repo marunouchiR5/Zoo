@@ -21,7 +21,7 @@ MonoBehaviour:
     Options:
     - Text: Cancel
       Action: 0
-    - Text: Go to Aquarium Entrance
+    - Text: Aquarium Entrance
       Action: 8
-    - Text: Go to Whale Area
+    - Text: Whale Area
       Action: 10

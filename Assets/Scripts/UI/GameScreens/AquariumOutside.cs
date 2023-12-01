@@ -111,12 +111,12 @@ public class AquariumOutside : BaseView
     // conversation decision options
     private void HandleEnterConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go Inside":
+            case DecisionAction.GoToAquariumInside:
                 GoToAquariumInside();
                 break;
                 // ... other cases as needed ...
@@ -125,15 +125,15 @@ public class AquariumOutside : BaseView
 
     private void HandleConversationOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go to Rabbit Area":
+            case DecisionAction.GoToRabbitArea:
                 GoToRabbitArea();
                 break;
-            case "Go to Lion Area":
+            case DecisionAction.GoToLionArea:
                 GoToLionArea();
                 break;
                 // ... other cases as needed ...
@@ -160,18 +160,6 @@ public class AquariumOutside : BaseView
     private void GoToLionArea()
     {
         m_GameViewManager.ShowLionArea();
-        m_GameViewManager.ConversationView.HideScreen();
-    }
-
-    private void GoToMonkeyArea()
-    {
-        m_GameViewManager.ShowMonkeyArea();
-        m_GameViewManager.ConversationView.HideScreen();
-    }
-
-    private void GoToElephantArea()
-    {
-        m_GameViewManager.ShowElephantArea();
         m_GameViewManager.ConversationView.HideScreen();
     }
 

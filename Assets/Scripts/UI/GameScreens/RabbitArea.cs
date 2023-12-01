@@ -99,12 +99,12 @@ public class RabbitArea : BaseView
 
     private void HandleFeedRabbitOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Feed Map Corner":
+            case DecisionAction.FeedMapCorner:
                 FeedMapCorner();
                 break;
                 // ... other cases as needed ...
@@ -146,15 +146,15 @@ public class RabbitArea : BaseView
             Task task = GameStateManager.Instance.CurrentTasks[0];
             if (task.Progress < task.ProgressGoal)
             {
-                switch (option.Text)
+                switch (option.Action)
                 {
-                    case "Cancel":
+                    case DecisionAction.Cancel:
                         Cancel();
                         break;
-                    case "Go to Monkey Area":
+                    case DecisionAction.GoToMonkeyArea:
                         GoToMonkeyArea();
                         break;
-                    case "Go to Lion Area":
+                    case DecisionAction.GoToLionArea:
                         GoToLionArea();
                         break;
                         // ... other cases as needed ...
@@ -162,18 +162,18 @@ public class RabbitArea : BaseView
             }
             else
             {
-                switch (option.Text)
+                switch (option.Action)
                 {
-                    case "Cancel":
+                    case DecisionAction.Cancel:
                         Cancel();
                         break;
-                    case "Go to Monkey Area":
+                    case DecisionAction.GoToMonkeyArea:
                         GoToMonkeyArea();
                         break;
-                    case "Go to Lion Area":
+                    case DecisionAction.GoToLionArea:
                         GoToLionArea();
                         break;
-                    case "Go to Zoo Gate":
+                    case DecisionAction.GoToZooGate:
                         GoToZooGate();
                         break;
                         // ... other cases as needed ...
@@ -182,18 +182,18 @@ public class RabbitArea : BaseView
         }
         else
         {
-            switch (option.Text)
+            switch (option.Action)
             {
-                case "Cancel":
+                case DecisionAction.Cancel:
                     Cancel();
                     break;
-                case "Go to Monkey Area":
+                case DecisionAction.GoToMonkeyArea:
                     GoToMonkeyArea();
                     break;
-                case "Go to Lion Area":
+                case DecisionAction.GoToLionArea:
                     GoToLionArea();
                     break;
-                case "Go to Aquarium Entrance":
+                case DecisionAction.GoToAquariumOutside:
                     GoToAquariumOutside();
                     break;
                     // ... other cases as needed ...

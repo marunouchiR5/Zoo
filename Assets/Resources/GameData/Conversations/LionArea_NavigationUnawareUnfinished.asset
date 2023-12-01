@@ -21,9 +21,9 @@ MonoBehaviour:
     Options:
     - Text: Cancel
       Action: 0
-    - Text: Go to Rabbit Area
+    - Text: Rabbit Area
       Action: 1
-    - Text: Go to Monkey Area
+    - Text: Monkey Area
       Action: 3
-    - Text: Go to Elephant Area
+    - Text: Elephant Area
       Action: 4

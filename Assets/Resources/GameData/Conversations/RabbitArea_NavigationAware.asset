@@ -21,9 +21,9 @@ MonoBehaviour:
     Options:
     - Text: Cancel
       Action: 0
-    - Text: Go to Monkey Area
+    - Text: Monkey Area
       Action: 3
-    - Text: Go to Lion Area
+    - Text: Lion Area
       Action: 2
-    - Text: Go to Aquarium Entrance
-      Action: 7
+    - Text: Aquarium Entrance
+      Action: 8

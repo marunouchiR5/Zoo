@@ -109,15 +109,15 @@ public class ZooGate : BaseView
         Task task = GameStateManager.Instance.CurrentTasks[0];
         if (task.Progress < task.ProgressGoal)
         {
-            switch (option.Text)
+            switch (option.Action)
             {
-                case "Cancel":
+                case DecisionAction.Cancel:
                     Cancel();
                     break;
-                case "Go to Rabbit Area":
+                case DecisionAction.GoToRabbitArea:
                     GoToRabbitArea();
                     break;
-                case "Go to Lion Area":
+                case DecisionAction.GoToLionArea:
                     GoToLionArea();
                     break;
                     // ... other cases as needed ...
@@ -125,18 +125,18 @@ public class ZooGate : BaseView
         }
         else
         {
-            switch (option.Text)
+            switch (option.Action)
             {
-                case "Cancel":
+                case DecisionAction.Cancel:
                     Cancel();
                     break;
-                case "Go to Rabbit Area":
+                case DecisionAction.GoToRabbitArea:
                     GoToRabbitArea();
                     break;
-                case "Go to Lion Area":
+                case DecisionAction.GoToLionArea:
                     GoToLionArea();
                     break;
-                case "Escape":
+                case DecisionAction.Escape:
                     Escape();
                     break;
                     // ... other cases as needed ...

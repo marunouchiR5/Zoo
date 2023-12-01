@@ -82,15 +82,15 @@ public class MonkeyArea : BaseView
     // conversation decision options
     private void HandleAwareOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go Left":
+            case DecisionAction.GoLeft:
                 GoLeft();
                 break;
-            case "Go Right":
+            case DecisionAction.GoRight:
                 GoRight();
                 break;
                 // ... other cases as needed ...
@@ -99,18 +99,18 @@ public class MonkeyArea : BaseView
 
     private void HandleUnawareOptionClick(DecisionOption option)
     {
-        switch (option.Text)
+        switch (option.Action)
         {
-            case "Cancel":
+            case DecisionAction.Cancel:
                 Cancel();
                 break;
-            case "Go to Rabbit Area":
+            case DecisionAction.GoToRabbitArea:
                 GoToRabbitArea();
                 break;
-            case "Go to Lion Area":
+            case DecisionAction.GoToLionArea:
                 GoToLionArea();
                 break;
-            case "Go to Elephant Area":
+            case DecisionAction.GoToElephantArea:
                 GoToElephantArea();
                 break;
                 // ... other cases as needed ...
