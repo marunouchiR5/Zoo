@@ -6,6 +6,8 @@
     <ui:Template name="MapView" src="project://database/Assets/UI/UXML/MapView.uxml?fileID=9197481963319205126&amp;guid=6ca0d519cadcefb4987129561f79e8ea&amp;type=3#MapView" />
     <ui:Template name="RulesView" src="project://database/Assets/UI/UXML/RulesView.uxml?fileID=9197481963319205126&amp;guid=0fb03f18f7650314c8909c9736ebc510&amp;type=3#RulesView" />
     <ui:Template name="LogView" src="project://database/Assets/UI/UXML/LogView.uxml?fileID=9197481963319205126&amp;guid=f48b41c421f6eec479deb88744a5b543&amp;type=3#LogView" />
+    <ui:Template name="GameOverView" src="project://database/Assets/UI/UXML/GameOverView.uxml?fileID=9197481963319205126&amp;guid=0c7bde48909587a45acfd32429899488&amp;type=3#GameOverView" />
+    <ui:Template name="GameFinalView" src="project://database/Assets/UI/UXML/GameFinalView.uxml?fileID=9197481963319205126&amp;guid=6b95841b4b377c14e9de959e56bb4e46&amp;type=3#GameFinalView" />
     <Style src="project://database/Assets/UI/USS/ConversationView.uss?fileID=7433441132597879392&amp;guid=cab8315123d424941adec9e8bcc4a5db&amp;type=3#ConversationView" />
     <ui:VisualElement name="MainGameView" style="flex-grow: 1;">
         <ui:Instance template="SceneView" name="SceneView" style="position: absolute; display: flex;" />
@@ -15,5 +17,7 @@
         <ui:Instance template="MapView" name="MapView" style="position: absolute; display: none;" />
         <ui:Instance template="RulesView" name="RulesView" style="position: absolute; display: none;" />
         <ui:Instance template="LogView" name="LogView" style="display: none; position: absolute; width: 1470px; height: 1020px;" />
+        <ui:Instance template="GameOverView" name="GameOverView" style="position: absolute; display: none;" />
+        <ui:Instance template="GameFinalView" name="GameFinalView" style="position: absolute; display: none;" />
     </ui:VisualElement>
 </ui:UXML>

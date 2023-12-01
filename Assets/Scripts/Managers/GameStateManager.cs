@@ -13,6 +13,7 @@ public class GameStateManager : MonoBehaviour
     public static event Action SanityChanged;
     public static event Action RuleSetCollected;
     public static event Action BecameAware;
+    public static event Action GameOver;
 
     public static GameStateManager Instance { get; private set; }
 
@@ -61,7 +62,7 @@ public class GameStateManager : MonoBehaviour
         StartNewGame();
     }
 
-    private void StartNewGame()
+    public void StartNewGame()
     {
         // Initialization
         // task
@@ -69,6 +70,7 @@ public class GameStateManager : MonoBehaviour
         string taskPath = $"GameData/Tasks/Unaware";
         Task initialTask = Resources.Load<Task>(taskPath);
         CurrentTasks.Add(initialTask);
+        VisitedAreas = new List<String> { /* ... */ };
         TaskUpdated?.Invoke();
 
         // inventory
@@ -100,8 +102,7 @@ public class GameStateManager : MonoBehaviour
         // rule sets
         CollectedRuleSets = new List<RuleSet> { /* ... */ };
 
-        // system related
-        VisitedAreas = new List<String> { /* ... */ };
+        // gameplay related
         Aware = false;
         ZooGateMapCollected = false;
         BlackClothesCollected = false;
@@ -124,6 +125,13 @@ public class GameStateManager : MonoBehaviour
     public void UpdateSanity(int updatedSanity)
     {
         CurrentSanity = Mathf.Min(updatedSanity, MaxSanity);
+        // game over when current sanity reaches zero
+        if (CurrentSanity <= 0)
+        {
+            GameOver?.Invoke();
+            return;
+        }
+
         SanityChanged?.Invoke();
 
         if (!Aware && CurrentSanity < MaxSanity)

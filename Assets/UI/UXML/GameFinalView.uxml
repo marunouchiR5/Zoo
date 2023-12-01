@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="game-final-view" style="width: 1470px; height: 1020px; background-color: rgba(0, 0, 0, 0.75); justify-content: center;">
+        <ui:Label tabindex="-1" text="Escaped!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="game-win" style="font-size: 96px; color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
+        <ui:Button text="Restart" parse-escape-sequences="true" display-tooltip-when-elided="true" name="restart" style="font-size: 32px; -unity-font-style: bold; width: 300px; height: 80px; align-self: center; margin-top: 50px;" />
+        <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="main-menu" style="font-size: 32px; -unity-font-style: bold; width: 300px; height: 80px; align-self: center; margin-top: 50px;" />
+    </ui:VisualElement>
+</ui:UXML>

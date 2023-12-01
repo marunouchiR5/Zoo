@@ -232,6 +232,7 @@ public class LionArea : BaseView
     {
         // after showing conversation, show win screen
         Debug.Log("Escaped!");
+        m_GameViewManager.ShowGameFinalView();
     }
 
     public override void ShowScreen()

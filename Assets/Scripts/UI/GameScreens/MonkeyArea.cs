@@ -164,7 +164,7 @@ public class MonkeyArea : BaseView
         if (GameStateManager.Instance.IsCurrentBodyEquipment("Black Clothes") && GameStateManager.Instance.MapCornerFed)
         {
             Debug.Log("Escaped!");
-            //todo
+            m_GameViewManager.ShowGameFinalView();
         }
         else
         {

@@ -34,6 +34,8 @@ public class GameViewManager : MonoBehaviour
     [SerializeField] MapView m_MapView;
     [SerializeField] RulesView m_RulesView;
     [SerializeField] ItemInspectView m_ItemInspectView;
+    [SerializeField] GameOverView m_GameOverView;
+    [SerializeField] GameFinalView m_GameFinalView;
 
     List<BaseView> m_AllSceneViews = new List<BaseView>();
     List<BaseView> m_AllOverlayViews = new List<BaseView>();
@@ -185,6 +187,12 @@ public class GameViewManager : MonoBehaviour
 
         if (m_ItemInspectView != null)
             m_AllOverlayViews.Add(m_ItemInspectView);
+
+        if (m_GameOverView != null)
+            m_AllOverlayViews.Add(m_GameOverView);
+
+        if (m_GameFinalView != null)
+            m_AllOverlayViews.Add(m_GameFinalView);
     }
 
     // shows one screen at a time
@@ -228,5 +236,15 @@ public class GameViewManager : MonoBehaviour
     public void ShowItemInspectView()
     {
         ShowOverlayView(m_ItemInspectView);
+    }
+
+    public void ShowGameOverView()
+    {
+        ShowOverlayView(m_GameOverView);
+    }
+
+    public void ShowGameFinalView()
+    {
+        ShowOverlayView(m_GameFinalView);
     }
 }

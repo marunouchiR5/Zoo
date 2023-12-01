@@ -166,7 +166,7 @@ public class ZooGate : BaseView
     private void Escape()
     {
         Debug.Log("Escaped!");
-        // switch scene
+        m_GameViewManager.ShowGameFinalView();
     }
 
     private void ClickStaff(ClickEvent evt)

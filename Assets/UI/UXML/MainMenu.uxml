@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/MainMenu.uss?fileID=7433441132597879392&amp;guid=d02c4ef1e9a35b74b9050bd4f8340f54&amp;type=3#MainMenu" />
+    <ui:VisualElement name="background" style="width: 100%; height: 100%; background-color: rgb(0, 0, 0);">
+        <ui:Label text="Zoo Story" parse-escape-sequences="true" display-tooltip-when-elided="true" name="game-title" style="font-size: 64px; -unity-font-style: bold; color: rgb(255, 255, 255); left: 100px; top: 100px;" />
+        <ui:VisualElement name="buttons" style="left: 1500px; flex-direction: column; top: 620px;">
+            <ui:Button text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="new-game" class="main-menu--buttons" />
+            <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit" class="main-menu--buttons" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
