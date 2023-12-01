@@ -18,7 +18,6 @@
         <ui:VisualElement name="buttons" style="flex-direction: row; justify-content: space-around;">
             <ui:Button text="Map" parse-escape-sequences="true" display-tooltip-when-elided="true" name="map--button" class="hud-button" />
             <ui:Button text="Rules" parse-escape-sequences="true" display-tooltip-when-elided="true" name="rules--button" class="hud-button" />
-            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings--button" class="hud-button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
