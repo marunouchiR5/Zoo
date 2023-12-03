@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da1b69fd62a2a204a9d5bf3aa2f8eb4d, type: 3}
-  m_Name: MapCorner
+  m_Script: {fileID: 11500000, guid: e2e8e510cd13cc742968574c3e8e2162, type: 3}
+  m_Name: RabbitHeadband
   m_EditorClassIdentifier: 
-  Name: Map Corner
-  Description: A piece of the map's right upper corner.
-  Icon: {fileID: 2800000, guid: f085a288f8416bb4d800dc2f5fd59bcc, type: 3}
-  Price: 0
+  Name: Rabbit Headband
+  Description: A Rabbit Ear Merch...
+  Icon: {fileID: 2800000, guid: 069b176dbdaf36b40932ee766761071c, type: 3}
+  Price: 2
+  EquipmentType: 0

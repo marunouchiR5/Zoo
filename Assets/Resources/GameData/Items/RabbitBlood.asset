@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rabbit Blood
   Description: Rabbit Blood...
-  Icon: {fileID: 0}
+  Icon: {fileID: 2800000, guid: 013186544674c2f44a69243e6fd6ce59, type: 3}
   Price: 1
   ItemType: 1
   EffectValue: 1

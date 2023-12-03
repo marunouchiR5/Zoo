@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e8e510cd13cc742968574c3e8e2162, type: 3}
+  m_Script: {fileID: 11500000, guid: da1b69fd62a2a204a9d5bf3aa2f8eb4d, type: 3}
   m_Name: RabbitMerch
   m_EditorClassIdentifier: 
   Name: Rabbit Merch
-  Description: A Rabbit Ear Merch...
-  Icon: {fileID: 0}
-  Price: 2
-  EquipmentType: 0
+  Description: A toy rabbit...
+  Icon: {fileID: 2800000, guid: 414c5ddfc99223e438c8ba911afdf0c0, type: 3}
+  Price: 1

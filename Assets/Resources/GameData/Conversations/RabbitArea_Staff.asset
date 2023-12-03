@@ -23,3 +23,10 @@ MonoBehaviour:
   - Speaker: Black-Clothed Staff
     Content: All small herbivores are kept in close areas to ensure your safety.
     Options: []
+  - Speaker: Black-Clothed Staff
+    Content: By the way, do you want to check our drinks?
+    Options:
+    - Text: Cancel
+      Action: 0
+    - Text: Check Drink Stall
+      Action: 17

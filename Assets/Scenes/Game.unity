@@ -742,7 +742,7 @@ MonoBehaviour:
   SelectedRuleSet: {fileID: 0}
   SelectedItem: {fileID: 0}
   currentShopInventoryId: 
-  ShopInventoryLionArea: {fileID: 11400000, guid: 7de3aedb4326dd946949925989a41bcb, type: 2}
+  ShopInventoryRabbitArea: {fileID: 11400000, guid: 7de3aedb4326dd946949925989a41bcb, type: 2}
   ShopInventoryAquariumInside: {fileID: 11400000, guid: 5a2e33ab672e55940bb6bde0fe2dce74, type: 2}
 --- !u!1 &953264233
 GameObject:

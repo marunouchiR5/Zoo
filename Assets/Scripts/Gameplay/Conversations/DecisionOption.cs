@@ -28,5 +28,6 @@ public enum DecisionAction
     GoLeft,
     GoRight,
     BuyTicket,
+    OpenShop,
     // Add other actions as needed
 }

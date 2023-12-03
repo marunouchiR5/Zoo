@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ticket
   Description: Ticket for the Aquarium. Does this place really exist?
-  Icon: {fileID: 0}
+  Icon: {fileID: 2800000, guid: f085a288f8416bb4d800dc2f5fd59bcc, type: 3}
   Price: 1

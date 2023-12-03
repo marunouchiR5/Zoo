@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="item-description" style="width: 600px; height: 410px; align-self: center; background-color: rgb(217, 217, 217); justify-content: center;">
-        <ui:VisualElement name="item-icon" style="width: 100px; height: 100px; background-color: rgb(255, 255, 255); margin-left: 50px; margin-bottom: 20px; margin-top: 50px;" />
+        <ui:VisualElement name="item-icon" style="width: 100px; height: 100px; margin-left: 50px; margin-bottom: 20px; margin-top: 50px; -unity-background-scale-mode: scale-to-fit;" />
         <ui:Label tabindex="-1" text="Rabbit Blood" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" style="font-size: 36px; -unity-font-style: bold-and-italic; margin-left: 50px;" />
         <ui:Label tabindex="-1" text="This tantalizing beverage not only looks inviting but also seems capable of restoring one Sanity Point." parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-desc" style="font-size: 24px; -unity-font-style: italic; margin-left: 50px; white-space: normal; width: 475px; height: 150px;" />
     </ui:VisualElement>

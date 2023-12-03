@@ -249,7 +249,29 @@ public class RabbitArea : BaseView
         GameStateManager.Instance.SetActiveConversationData("RabbitArea", "Staff");
         m_GameViewManager.ShowConversationView();
 
-        // state related
+        // Set the delegate to handle option clicks
+        m_GameViewManager.ConversationView.OnOptionClicked = HandleStaffOptionClick;
+    }
+
+    // conversation decision options
+    private void HandleStaffOptionClick(DecisionOption option)
+    {
+        switch (option.Action)
+        {
+            case DecisionAction.Cancel:
+                Cancel();
+                break;
+            case DecisionAction.OpenShop:
+                OpenShop();
+                break;
+                // ... other cases as needed ...
+        }
+    }
+
+    private void OpenShop()
+    {
+        GameStateManager.Instance.SetCurrentShopInventoryId("RabbitArea");
+        m_GameViewManager.ShowShopView();
     }
 
     public override void ShowScreen()

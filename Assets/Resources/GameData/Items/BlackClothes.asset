@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Black Clothes
   Description: Black Uniform for Zoo Staff
-  Icon: {fileID: 0}
+  Icon: {fileID: 2800000, guid: 716dd365592afaf48a3bc9bd86e1700d, type: 3}
+  Price: 0
   EquipmentType: 1

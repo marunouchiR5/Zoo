@@ -51,7 +51,7 @@ public class GameStateManager : MonoBehaviour
     public Dictionary<string, List<ItemEntry>> ShopInventories = new Dictionary<string, List<ItemEntry>>();
     public Dictionary<string, List<ItemEntry>> CopiedShopInventories = new Dictionary<string, List<ItemEntry>>();
     public string currentShopInventoryId;
-    public ShopInventory ShopInventoryLionArea;
+    public ShopInventory ShopInventoryRabbitArea;
     public ShopInventory ShopInventoryAquariumInside;
 
     void Awake()
@@ -134,7 +134,7 @@ public class GameStateManager : MonoBehaviour
     private void InitializeShopInventories()
     {
         // Use the ShopInventory scriptable objects to initialize the shop inventories
-        ShopInventories["LionArea"] = ConvertShopInventoryToList(ShopInventoryLionArea);
+        ShopInventories["RabbitArea"] = ConvertShopInventoryToList(ShopInventoryRabbitArea);
         ShopInventories["AquariumInside"] = ConvertShopInventoryToList(ShopInventoryAquariumInside);
     }
 
