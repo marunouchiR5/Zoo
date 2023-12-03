@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class LionArea : BaseView
 {
+    // events
+    public static event Action SceneScreenStarted;
+
     const string k_WhiteLion1 = "white-lion1";
     const string k_WhiteLion2 = "white-lion2";
     const string k_WhiteLion3 = "white-lion3";
@@ -246,5 +250,7 @@ public class LionArea : BaseView
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }
         }
+
+        SceneScreenStarted?.Invoke();
     }
 }

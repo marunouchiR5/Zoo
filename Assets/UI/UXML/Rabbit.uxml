@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="rabbit1" class="interactable" style="width: 132px; height: 138px; background-image: url(&apos;project://database/Assets/Resources/UI/Textures/elements/rabbit1.png?fileID=2800000&amp;guid=cd3da4a053b406947876fdbc7fd1358c&amp;type=3#rabbit1&apos;); left: 617px; top: 799px;" />
+</ui:UXML>

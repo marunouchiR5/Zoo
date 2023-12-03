@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,22 @@ using UnityEngine.UIElements;
 
 public class MonkeyArea : BaseView
 {
+    // events
+    public static event Action SceneScreenStarted;
+
     const string k_Background = "monkey-area";
     const string k_Monkey1 = "monkey1";
     const string k_Monkey2 = "monkey2";
     const string k_Navigation = "navigation";
     const string k_Staff = "staff";
+    const string k_Rabbit = "rabbit1";
 
     VisualElement m_Background;
     Button m_Monkey1;
     Button m_Monkey2;
     Button m_Navigation;
     Button m_Staff;
+    Button m_Rabbit;
 
     private void OnEnable()
     {
@@ -37,6 +43,7 @@ public class MonkeyArea : BaseView
         m_Monkey2 = m_Screen.Q<Button>(k_Monkey2);
         m_Navigation = m_Screen.Q<Button>(k_Navigation);
         m_Staff = m_Screen.Q<Button>(k_Staff);
+        m_Rabbit = m_Screen.Q<Button>(k_Rabbit);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -45,6 +52,7 @@ public class MonkeyArea : BaseView
         m_Monkey2?.RegisterCallback<ClickEvent>(InteractMonkey);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
         m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
+        m_Rabbit?.RegisterCallback<ClickEvent>(InteractRabbit);
     }
 
     private void InteractMonkey(ClickEvent evt)
@@ -142,7 +150,7 @@ public class MonkeyArea : BaseView
     private void GoLeft()
     {
         // Generate a random number between 0 and 2 (inclusive)
-        int randomNumber = Random.Range(0, 3);
+        int randomNumber = UnityEngine.Random.Range(0, 3);
 
         switch (randomNumber)
         {
@@ -186,6 +194,15 @@ public class MonkeyArea : BaseView
         // state related
     }
 
+    private void InteractRabbit(ClickEvent evt)
+    {
+        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetActiveConversationData("MonkeyArea", "Rabbit");
+        m_GameViewManager.ShowConversationView();
+
+        // state related
+    }
+
     public override void ShowScreen()
     {
         base.ShowScreen();
@@ -197,6 +214,8 @@ public class MonkeyArea : BaseView
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }
         }
+
+        SceneScreenStarted?.Invoke();
     }
 
     // event-handling methods
@@ -212,6 +231,9 @@ public class MonkeyArea : BaseView
 
         // Apply the new background image to m_Background
         m_Background.style.backgroundImage = new StyleBackground(newBackgroundTexture);
+
+        // Show rabbit
+        m_Rabbit.style.display = DisplayStyle.Flex;
     }
 
     private void OnNewGameStarted()
@@ -226,5 +248,8 @@ public class MonkeyArea : BaseView
 
         // Apply the new background image to m_Background
         m_Background.style.backgroundImage = new StyleBackground(newBackgroundTexture);
+
+        // Hide rabbit
+        m_Rabbit.style.display = DisplayStyle.None;
     }
 }

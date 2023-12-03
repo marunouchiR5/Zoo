@@ -90,6 +90,7 @@ public class InventoryDisplay : HUD
 
     private void OnTokenUpdated()
     {
+        Debug.Log("OnTokenUpdated - current token: " + GameStateManager.Instance.CurrentToken.ToString());
         m_Token.text = "Token: " + GameStateManager.Instance.CurrentToken.ToString();
     }
     

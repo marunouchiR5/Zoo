@@ -27,5 +27,6 @@ public enum DecisionAction
     FeedMapCorner,
     GoLeft,
     GoRight,
+    BuyTicket,
     // Add other actions as needed
 }

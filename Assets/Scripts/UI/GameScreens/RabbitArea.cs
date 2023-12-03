@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class RabbitArea : BaseView
 {
+    // events
+    public static event Action SceneScreenStarted;
+
     const string k_Bench = "bench";
     const string k_RabbitOutside = "rabbit1";
     const string k_RabbitInside1 = "rabbit2";
@@ -259,5 +263,7 @@ public class RabbitArea : BaseView
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }
         }
+
+        SceneScreenStarted?.Invoke();
     }
 }

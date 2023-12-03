@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class ElephantArea : BaseView
 {
+    // events
+    public static event Action SceneScreenStarted;
+
     [Header("Rule Set to be Collected")]
     [SerializeField] RuleSet m_Rules;
 
@@ -176,6 +180,8 @@ public class ElephantArea : BaseView
                 GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
             }
         }
+
+        SceneScreenStarted?.Invoke();
     }
 
     // event-handling methods

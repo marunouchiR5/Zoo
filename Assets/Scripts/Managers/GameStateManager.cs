@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class GameStateManager : MonoBehaviour
     public bool ZooDirectorRoomMapCollected { get; set; }
     public bool JellyfishLightUsed { get; set; }
     public bool MapCornerFed { get; set; }
+    public bool TicketSold { get; set; }
 
     // specific view related
     public ConversationData ConversationData;
@@ -114,6 +116,7 @@ public class GameStateManager : MonoBehaviour
         ZooDirectorRoomMapCollected = false;
         JellyfishLightUsed = false;
         MapCornerFed = false;
+        TicketSold = false;
         NewGameStarted?.Invoke();
     }
 
@@ -260,4 +263,41 @@ public class GameStateManager : MonoBehaviour
 
         return CurrentBodyEquipment.Name.Equals(equipmentName, StringComparison.OrdinalIgnoreCase);
     }
+
+    public void BuyItem(string itemName)
+    {
+        string itemPath = $"GameData/Items/" + itemName;
+        if (string.IsNullOrEmpty(itemPath))
+        {
+            Debug.LogError("Invalid item path provided.");
+            return;
+        }
+
+        Item itemToBuy = Resources.Load<Item>(itemPath);
+        if (itemToBuy == null)
+        {
+            Debug.LogError($"Failed to load item at path: {itemPath}");
+            return;
+        }
+
+        if (CurrentToken >= itemToBuy.Price)
+        {
+            // Deduct the price from the current tokens
+            CurrentToken -= itemToBuy.Price;
+
+            // Add the item to the inventory
+            CurrentInventory.Add(itemToBuy);
+            Debug.Log($"Purchased and added item to inventory: {itemToBuy.name}");
+
+            // Invoke the inventory updated event
+            InventoryUpdated?.Invoke();
+            // Optionally, invoke the token updated event
+            TokenUpdated?.Invoke();
+        }
+        else
+        {
+            Debug.LogWarning($"Not enough tokens to buy item: {itemToBuy.name}");
+        }
+    }
+
 }
