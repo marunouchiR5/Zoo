@@ -53,10 +53,7 @@ public class ItemInspectView : BaseView
         if (selectedItem != null)
         {
             // Set the item icon
-            if (m_ItemIcon is Image itemIconImage)
-            {
-                itemIconImage.sprite = selectedItem.Icon;
-            }
+            m_ItemIcon.style.backgroundImage = selectedItem.Icon;
 
             // Set the item name
             m_ItemName.text = selectedItem.Name;

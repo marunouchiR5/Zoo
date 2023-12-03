@@ -47,6 +47,13 @@ public class GameStateManager : MonoBehaviour
     public RuleSet SelectedRuleSet;
     public Item SelectedItem;   // in HUD - Equipment
 
+    // shop related
+    public Dictionary<string, List<ItemEntry>> ShopInventories = new Dictionary<string, List<ItemEntry>>();
+    public Dictionary<string, List<ItemEntry>> CopiedShopInventories = new Dictionary<string, List<ItemEntry>>();
+    public string currentShopInventoryId;
+    public ShopInventory ShopInventoryLionArea;
+    public ShopInventory ShopInventoryAquariumInside;
+
     void Awake()
     {
         if (Instance == null)
@@ -118,6 +125,44 @@ public class GameStateManager : MonoBehaviour
         MapCornerFed = false;
         TicketSold = false;
         NewGameStarted?.Invoke();
+
+        // shop related
+        InitializeShopInventories();
+        CopyShopInventories();
+    }
+
+    private void InitializeShopInventories()
+    {
+        // Use the ShopInventory scriptable objects to initialize the shop inventories
+        ShopInventories["LionArea"] = ConvertShopInventoryToList(ShopInventoryLionArea);
+        ShopInventories["AquariumInside"] = ConvertShopInventoryToList(ShopInventoryAquariumInside);
+    }
+
+    private List<ItemEntry> ConvertShopInventoryToList(ShopInventory shopInventory)
+    {
+        return new List<ItemEntry>(shopInventory.items);
+    }
+
+    private void CopyShopInventories()
+    {
+        CopiedShopInventories.Clear();
+        foreach (var keyValuePair in ShopInventories)
+        {
+            // Deep copy each List<ItemEntry>
+            List<ItemEntry> copiedList = new List<ItemEntry>();
+            foreach (var itemEntry in keyValuePair.Value)
+            {
+                // Assuming ItemEntry is a class - create a new instance (deep copy)
+                ItemEntry newItemEntry = new ItemEntry
+                {
+                    item = itemEntry.item, // Assuming item is a reference type
+                    quantity = itemEntry.quantity
+                };
+                copiedList.Add(newItemEntry);
+            }
+
+            CopiedShopInventories.Add(keyValuePair.Key, copiedList);
+        }
     }
 
     public void SetActiveConversationData(string sceneName, string buttonName)
@@ -300,4 +345,42 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
+    // Method to set the current shop inventory identifier
+    public void SetCurrentShopInventoryId(string shopId)
+    {
+        currentShopInventoryId = shopId;
+        // Optionally, trigger an event or update if needed
+    }
+
+    // Method to get the current shop's inventory
+    public List<ItemEntry> GetCurrentShopInventory()
+    {
+        if (CopiedShopInventories.ContainsKey(currentShopInventoryId))
+        {
+            return CopiedShopInventories[currentShopInventoryId];
+        }
+        else
+        {
+            Debug.LogWarning("Shop inventory not found for id: " + currentShopInventoryId);
+            return new List<ItemEntry>(); // Return empty list or handle as needed
+        }
+    }
+
+    public int GetItemStock(string itemName, string shopName)
+    {
+        if (ShopInventories.ContainsKey(shopName))
+        {
+            List<ItemEntry> shopInventory = ShopInventories[shopName];
+            foreach (var shopItem in shopInventory)
+            {
+                if (shopItem.item.name.Equals(itemName, StringComparison.OrdinalIgnoreCase))
+                {
+                    // Assuming each shopItem has a Quantity property
+                    return shopItem.quantity;
+                }
+            }
+        }
+
+        return 0; // Item not found in the specified shop inventory
+    }
 }

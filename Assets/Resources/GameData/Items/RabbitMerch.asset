@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a36e05a753959c4aa8b1b71b5ad6661, type: 3}
-  m_Name: EnergyDrink
+  m_Script: {fileID: 11500000, guid: e2e8e510cd13cc742968574c3e8e2162, type: 3}
+  m_Name: RabbitMerch
   m_EditorClassIdentifier: 
-  Name: Energy Drink
-  Description: Use to restore 1 sanity.
+  Name: Rabbit Merch
+  Description: A Rabbit Ear Merch...
   Icon: {fileID: 0}
-  Price: 1
-  ItemType: 0
-  EffectValue: 1
+  Price: 2
+  EquipmentType: 0

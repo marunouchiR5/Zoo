@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a36e05a753959c4aa8b1b71b5ad6661, type: 3}
-  m_Name: EnergyDrink
+  m_Name: RabbitBlood
   m_EditorClassIdentifier: 
-  Name: Energy Drink
-  Description: Use to restore 1 sanity.
+  Name: Rabbit Blood
+  Description: Rabbit Blood...
   Icon: {fileID: 0}
   Price: 1
-  ItemType: 0
+  ItemType: 1
   EffectValue: 1

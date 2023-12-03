@@ -172,9 +172,11 @@ public class AquariumInside : BaseView
     private void ClickStaff(ClickEvent evt)
     {
         Debug.Log(m_ScreenName + " " + evt.ToString());
-        GameStateManager.Instance.SetActiveConversationData("AquariumInside", "Staff");
-        m_GameViewManager.ShowConversationView();
+        //GameStateManager.Instance.SetActiveConversationData("AquariumInside", "Staff");
+        //m_GameViewManager.ShowConversationView();
 
+        GameStateManager.Instance.SetCurrentShopInventoryId("AquariumInside");
+        m_GameViewManager.ShowShopView();
         // state related
     }
 

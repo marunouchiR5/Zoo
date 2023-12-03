@@ -741,6 +741,9 @@ MonoBehaviour:
   ConversationData: {fileID: 0}
   SelectedRuleSet: {fileID: 0}
   SelectedItem: {fileID: 0}
+  currentShopInventoryId: 
+  ShopInventoryLionArea: {fileID: 11400000, guid: 7de3aedb4326dd946949925989a41bcb, type: 2}
+  ShopInventoryAquariumInside: {fileID: 11400000, guid: 5a2e33ab672e55940bb6bde0fe2dce74, type: 2}
 --- !u!1 &953264233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,12 +1456,12 @@ Transform:
   - {fileID: 506957579}
   - {fileID: 303234314}
   - {fileID: 1028404608}
-  - {fileID: 2000618824}
   - {fileID: 1050830198}
   - {fileID: 1625145868}
   - {fileID: 52384558}
   - {fileID: 2128433681}
   - {fileID: 953264235}
+  - {fileID: 2000618824}
   m_Father: {fileID: 2085183924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1811975811
@@ -1549,6 +1552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000618824}
+  - component: {fileID: 2000618825}
   m_Layer: 0
   m_Name: ShopView
   m_TagString: Untagged
@@ -1571,6 +1575,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1810715230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2000618825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000618823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c6d6942073c8428002d79505d4579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: ShopView
+  m_GameViewManager: {fileID: 2085183926}
+  m_Document: {fileID: 2085183925}
+  m_ShopItemAsset: {fileID: 9197481963319205126, guid: 181e05514690abf429edbeaae33b83b2, type: 3}
 --- !u!1 &2085183923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1674,7 @@ MonoBehaviour:
   m_ItemInspectView: {fileID: 1050830199}
   m_GameOverView: {fileID: 2128433680}
   m_GameFinalView: {fileID: 953264234}
+  m_ShopView: {fileID: 2000618825}
 --- !u!1 &2103080218
 GameObject:
   m_ObjectHideFlags: 0

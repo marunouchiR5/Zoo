@@ -2,7 +2,7 @@
     <ui:Template name="ItemDescription" src="project://database/Assets/UI/UXML/ItemDescription.uxml?fileID=9197481963319205126&amp;guid=d22049d68e4417f469f48bac9935dbc8&amp;type=3#ItemDescription" />
     <Style src="project://database/Assets/UI/USS/ShopView.uss?fileID=7433441132597879392&amp;guid=fa9b51cff7fc1cc4fa93d4cf7a1e654a&amp;type=3#ShopView" />
     <ui:VisualElement name="shop-view" style="width: 1470px; height: 1020px;">
-        <ui:VisualElement name="items-area" style="height: 70%; flex-direction: row;">
+        <ui:VisualElement name="items-area" style="height: 70%; flex-direction: row; background-color: rgba(0, 0, 0, 0.48);">
             <ui:VisualElement name="list-area" style="width: 50%; justify-content: center;">
                 <ui:VisualElement name="item-list-labels" style="flex-direction: row; justify-content: space-between; width: 550px; align-self: center; margin-bottom: 10px;">
                     <ui:Label tabindex="-1" text="Trade Items" parse-escape-sequences="true" display-tooltip-when-elided="true" name="trade-items--label" class="item-list--labels" />
@@ -15,13 +15,13 @@
                 <ui:Instance template="ItemDescription" name="ItemDescription" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="messages-area" style="height: 30%; flex-direction: row; justify-content: center;">
+        <ui:VisualElement name="messages-area" style="height: 30%; flex-direction: row; justify-content: center; background-color: rgba(0, 0, 0, 0.75);">
             <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="message--label" style="font-size: 32px; color: rgb(255, 255, 255); align-self: center; -unity-text-align: upper-center; width: 400px;" />
             <ui:VisualElement name="shop-buttons" style="position: absolute; right: 65px; align-self: center;">
-                <ui:VisualElement name="amount-button" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="amount--label" style="background-color: rgb(217, 217, 217); font-size: 32px; -unity-font-style: bold; width: 300px; height: 80px; -unity-text-align: middle-center;" />
+                <ui:VisualElement name="amount-button" style="flex-direction: row;">
                     <ui:Button text="-" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subtract--button" class="amount--button" style="margin-top: 4px; margin-right: 4px; margin-bottom: 2px; margin-left: 2px; font-size: 32px; -unity-font-style: bold;" />
-                    <ui:Button text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add--button" class="amount--button" style="position: absolute; left: 220px; margin-top: 4px; margin-right: 4px; margin-bottom: 2px; margin-left: 2px; font-size: 32px; -unity-font-style: bold;" />
+                    <ui:Button text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="confirm--button" style="flex-grow: 1; margin-top: 4px; margin-left: 2px; margin-bottom: 2px; margin-right: 2px; -unity-font-style: bold; font-size: 32px;" />
+                    <ui:Button text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add--button" class="amount--button" style="margin-top: 4px; margin-right: 4px; margin-bottom: 2px; margin-left: 2px; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
                 <ui:Button text="I want them all." parse-escape-sequences="true" display-tooltip-when-elided="true" name="want-all--button" class="shop--button" />
                 <ui:Button text="Never mind." parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel--button" class="shop--button" />
