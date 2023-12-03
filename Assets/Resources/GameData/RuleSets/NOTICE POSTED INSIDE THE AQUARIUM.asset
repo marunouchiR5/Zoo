@@ -34,49 +34,37 @@ MonoBehaviour:
     Content: If you see items so marked on the shelf, ignore them.
     Options: []
   - Speaker: 3
-    Content: If you entered the aquarium before 4:00 pm on a day, please limit your
-      stay to under thirty minutes.
-    Options: []
-  - Speaker: 4
-    Content: If you entered the aquarium after 4:01 pm on a day, please stay no shorter
-      than four hours.
-    Options: []
-  - Speaker: 5
     Content: This is an aquarium, and only marine animals are on display.
     Options: []
-  - Speaker: 5
+  - Speaker: 3
     Content: If you see an elephant swimming in the Whales Area, do not scream or
       appear shocked, that is a 3D hologram installed for amusement.
     Options: []
-  - Speaker: 5
+  - Speaker: 3
     Content: Treat it normally, and pretend it is a whale.
     Options: []
-  - Speaker: 6
+  - Speaker: 4
     Content: The aquarium can be used to spend the night.
     Options: []
-  - Speaker: 6
-    Content: Left of the jellyfish area are guest rooms for tourists and vagabonds.
+  - Speaker: 4
+    Content: Left of the jellyfish area are guest rooms for tourists.
     Options: []
-  - Speaker: 6
-    Content: If you need to use a guest room, please switch off the jellyfish night
-      lamp in your room before going to sleep.
+  - Speaker: 4
+    Content: If you need to use a guest room, please switch on the jellyfish night
+      lamp in your room.
     Options: []
-  - Speaker: 7
-    Content: Our employees don red uniforms, and only perform routine cleaning and
-      checking every night after 0:30 am.
-    Options: []
-  - Speaker: 7
+  - Speaker: 5
     Content: If you encounter a person in black uniforms claiming to be an employee,
-      you can talk to them and can ask them to temporarily show you around.
+      you can talk to them.
     Options: []
-  - Speaker: 7
+  - Speaker: 5
     Content: Do not hand your maps to this person, particularly the corner you can
       tear off following the dashed line.
     Options: []
-  - Speaker: 8
+  - Speaker: 6
     Content: Disobey the above rules, all consequences are at your own cost.
     Options: []
-  - Speaker: 9
+  - Speaker: 7
     Content: The aquarium exists and does not serve any organization.
     Options: []
   SetName: NOTICE POSTED INSIDE THE AQUARIUM

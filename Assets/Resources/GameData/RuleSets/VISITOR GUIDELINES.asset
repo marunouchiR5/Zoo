@@ -43,8 +43,7 @@ MonoBehaviour:
       from it immediately with your children, and report to a zoo worker.
     Options: []
   - Speaker: 1
-    Content: Do not attempt to walk towards the rabbit, and do not touch it, especially
-      when the rabbit has discovered you and is approaching at high speed.
+    Content: Do not attempt to walk towards the rabbit, and do not touch it.
     Options: []
   - Speaker: 2
     Content: There is only one passageway through the Monkeys Area, and only monkeys
@@ -78,8 +77,7 @@ MonoBehaviour:
     Content: If a zoo employee attempts to sell you a ticket to the aquarium, refuse.
     Options: []
   - Speaker: 7
-    Content: If you already see the Aquarium, leave immediately, and dial the number
-      on your map to notify us.
+    Content: If you already see the Aquarium, leave immediately.
     Options: []
   - Speaker: 8
     Content: Do not feed the rabbits.
@@ -97,10 +95,10 @@ MonoBehaviour:
       leave the zoo."
     Options: []
   - Speaker: 10
-    Content: If you disobey any of the above and find yourself lost, or separated
-      from people in your party, please make your way to a drink stall within 15
-      minutes, and inform an employee in blue uniform (Note, if you see a zoo employee
-      in black, pretend not to hear whatever they may say to you).
+    Content: If you disobey any of the above and find yourself lost, please make
+      your way to a drink stall, and inform an employee in blue uniform (Note, if
+      you see a zoo employee in black, pretend not to hear whatever they may say
+      to you).
     Options: []
   - Speaker: 10
     Content: "The employee will immediately send you to the employee\u2019s passageway
@@ -154,10 +152,6 @@ MonoBehaviour:
     Content: If you encounter any situation you cannot resolve, and find yourself
       without help, please immediately, at all costs, and by all means, make your
       way to the Lions Area.
-    Options: []
-  - Speaker: 15
-    Content: "Be alert of anyone in your party you\u2019ve lost once or above, especially
-      when they repeatedly suggest visiting the aquarium or the Elephants Area."
     Options: []
   - Speaker: 
     Content: As long as you obey the rules above, you will have a pleasant time at

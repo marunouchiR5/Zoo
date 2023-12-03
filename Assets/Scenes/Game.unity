@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_ScreenName: GuestRoom
   m_GameViewManager: {fileID: 2085183926}
   m_Document: {fileID: 2085183925}
-  m_Rules: {fileID: 11400000, guid: 0e3d5893f4fc0824d8735d0175da8eb3, type: 2}
+  m_Rules: {fileID: 11400000, guid: 024673970fc441042a16859ff9261bb0, type: 2}
 --- !u!1 &1543820817
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,12 +53,6 @@ MonoBehaviour:
   - Speaker: 4
     Content: The guards in the Elephants Area are trustworthy.
     Options: []
-  - Speaker: 4
-    Content: But the end of their shift is 1 am.
-    Options: []
-  - Speaker: 4
-    Content: You must seek help before this.
-    Options: []
   - Speaker: 5
     Content: IT likes light, especially at night.
     Options: []
