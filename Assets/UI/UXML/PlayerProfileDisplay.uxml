@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="PlayerProfileDisplay" style="flex-grow: 1;">
-        <ui:VisualElement name="player-profile" style="width: 200px; height: 300px; background-color: rgb(255, 255, 255); margin-top: 15px;" />
+        <ui:VisualElement name="player-profile" style="width: 200px; height: 300px; background-color: rgb(255, 255, 255); margin-top: 15px; background-image: resource(&apos;UI/Textures/elements/unaware&apos;); -unity-background-scale-mode: scale-to-fit;" />
     </ui:VisualElement>
 </ui:UXML>
