@@ -12,11 +12,13 @@ public class PlayerProfileDisplay : HUD
     private void OnEnable()
     {
         GameStateManager.SanityChanged += OnPlayerProfileChanged;
+        Equipment.EquipmentChanged += OnPlayerProfileChanged;
     }
 
     private void OnDisable()
     {
         GameStateManager.SanityChanged -= OnPlayerProfileChanged;
+        Equipment.EquipmentChanged -= OnPlayerProfileChanged;
     }
 
     protected override void SetVisualElements()
@@ -36,18 +38,37 @@ public class PlayerProfileDisplay : HUD
     private string DetermineProfileImage(int currentSanity)
     {
         // Adjust the returned strings to match the names of your actual image assets
-        switch (currentSanity)
+        if (GameStateManager.Instance.IsCurrentBodyEquipment("Black Clothes"))
         {
-            case 4:
-                return "unaware"; // Sanity level 4 - Normal state
-            case 3:
-                return "rabbitear"; // Sanity level 3 - Slightly stressed
-            case 2:
-                return "rabbitear"; // Sanity level 2 - Stressed
-            case 1:
-                return "rabbitear"; // Sanity level 1 - Very stressed
-            default:
-                return "unaware"; // In case of an unexpected value
+            switch (currentSanity)
+            {
+                case 4:
+                    return "black"; // Sanity level 4 - Normal state
+                case 3:
+                    return "black+rabbitear"; // Sanity level 3 - Slightly stressed
+                case 2:
+                    return "rabbit+black"; // Sanity level 2 - Stressed
+                case 1:
+                    return "goat+black"; // Sanity level 1 - Very stressed
+                default:
+                    return "goat+black"; // In case of an unexpected value
+            }
+        }
+        else
+        {
+            switch (currentSanity)
+            {
+                case 4:
+                    return "unaware"; // Sanity level 4 - Normal state
+                case 3:
+                    return "rabbitear"; // Sanity level 3 - Slightly stressed
+                case 2:
+                    return "rabbithead"; // Sanity level 2 - Stressed
+                case 1:
+                    return "goathead"; // Sanity level 1 - Very stressed
+                default:
+                    return "goathead"; // In case of an unexpected value
+            }
         }
     }
 

@@ -15,12 +15,12 @@ public class LogView : BaseView
 
     private void OnEnable()
     {
-
+        GameStateManager.RuleSetCollected += OnRuleSetCollected;
     }
 
     private void OnDisable()
     {
-
+        GameStateManager.RuleSetCollected -= OnRuleSetCollected;
     }
 
     protected override void SetVisualElements()
@@ -97,5 +97,11 @@ public class LogView : BaseView
     private void HideLogView(ClickEvent evt)
     {
         HideScreen();
+    }
+
+    // event-handling methods
+    private void OnRuleSetCollected()
+    {
+        ShowScreen();
     }
 }

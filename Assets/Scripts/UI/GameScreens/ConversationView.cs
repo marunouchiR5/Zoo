@@ -177,7 +177,6 @@ public class ConversationView : BaseView
     }
 
     // event-handling methods
-
     private void OnSceneScreenStarted()
     {
         // Define the probability (50% chance in this example)

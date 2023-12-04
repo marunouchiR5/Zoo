@@ -14,7 +14,6 @@ public class GameStateManager : MonoBehaviour
     public static event Action SanityChanged;
     public static event Action RuleSetCollected;
     public static event Action BecameAware;
-    public static event Action GameOver;
     public static event Action NewGameStarted;
 
     public static GameStateManager Instance { get; private set; }
@@ -179,13 +178,8 @@ public class GameStateManager : MonoBehaviour
     public void UpdateSanity(int updatedSanity)
     {
         CurrentSanity = Mathf.Min(updatedSanity, MaxSanity);
-        // game over when current sanity reaches zero
-        if (CurrentSanity <= 0)
-        {
-            GameOver?.Invoke();
-            return;
-        }
 
+        // update sanity level display in HUD
         SanityChanged?.Invoke();
 
         if (!Aware && CurrentSanity < MaxSanity)
@@ -200,8 +194,6 @@ public class GameStateManager : MonoBehaviour
             CurrentTasks.Add(initialTask);
             TaskUpdated?.Invoke();
         }
-
-        // player profile related
     }
 
     public void AddRuleSet(RuleSet ruleSetToAdd)
@@ -213,6 +205,8 @@ public class GameStateManager : MonoBehaviour
             CollectedRuleSets.Add(ruleSetToAdd);
             Debug.Log("Added RuleSet: " + ruleSetToAdd.SetName);
 
+            // Show this rule set
+            SelectedRuleSet = ruleSetToAdd;
             RuleSetCollected?.Invoke();
         }
         else

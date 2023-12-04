@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class SanityLevelDisplay : HUD
 {
+    // events
+    public static event Action GameOver;
+
     const string k_SanityLevel = "sanity-level";
 
     const string k_SanityLevelBackgroundFull = "sanity-level-box--full";
@@ -33,14 +37,6 @@ public class SanityLevelDisplay : HUD
     {
         int currentSanity = GameStateManager.Instance.CurrentSanity;
 
-        if (currentSanity <= 0)
-        {
-            Debug.Log("Game Over - Player Sanity reached 0");
-            // todo
-            // show game over view for restart (stop all other functions)
-            return;
-        }
-
         for (int i = 0; i < m_SanityLevel.childCount; i++)
         {
             VisualElement child = m_SanityLevel[i];
@@ -54,6 +50,14 @@ public class SanityLevelDisplay : HUD
                 child.RemoveFromClassList(k_SanityLevelBackgroundHalf);
                 child.AddToClassList(k_SanityLevelBackgroundFull);
             }
+        }
+
+        // game over when current sanity reaches zero
+        if (currentSanity <= 0)
+        {
+            Debug.Log("Game Over - Player Sanity reached 0");
+            GameOver?.Invoke();
+            return;
         }
     }
 }

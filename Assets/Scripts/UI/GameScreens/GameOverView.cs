@@ -13,12 +13,12 @@ public class GameOverView : BaseView
 
     private void OnEnable()
     {
-        GameStateManager.GameOver += OnGameOver;
+        SanityLevelDisplay.GameOver += OnGameOver;
     }
 
     private void OnDisable()
     {
-        GameStateManager.GameOver -= OnGameOver;
+        SanityLevelDisplay.GameOver -= OnGameOver;
     }
 
     protected override void SetVisualElements()
