@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class ShopView : BaseView
 {
+    // events
+    public static event Action StaffButtonClicked;
+
     [Header("Shop Items")]
     [SerializeField] VisualTreeAsset m_ShopItemAsset;
 
@@ -19,6 +23,7 @@ public class ShopView : BaseView
     const string k_AddButton = "add--button";
     const string k_WantAllButton = "want-all--button";
     const string k_CancelButton = "cancel--button";
+    const string k_StaffButton = "staff--button";
 
     ListView m_ItemList;
     VisualElement m_ItemIcon;
@@ -30,6 +35,7 @@ public class ShopView : BaseView
     Button m_AddButton;
     Button m_WantAllButton;
     Button m_CancelButton;
+    Button m_StaffButton;
 
     private Item currentShopItem; // The currently selected item in the shop
     private int currentAmount = 1; // Default amount
@@ -57,6 +63,7 @@ public class ShopView : BaseView
         m_AddButton = m_Screen.Q<Button>(k_AddButton);
         m_WantAllButton = m_Screen.Q<Button>(k_WantAllButton);
         m_CancelButton = m_Screen.Q<Button>(k_CancelButton);
+        m_StaffButton = m_Screen.Q<Button>(k_StaffButton);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -66,6 +73,7 @@ public class ShopView : BaseView
         m_ConfirmButton?.RegisterCallback<ClickEvent>(ConfirmPurchase);
         m_WantAllButton?.RegisterCallback<ClickEvent>(BuyAllItems);
         m_CancelButton?.RegisterCallback<ClickEvent>(CloseShopView);
+        m_StaffButton?.RegisterCallback<ClickEvent>(evt => StaffButtonClicked?.Invoke());
     }
 
     private void UpdateItemDetailsUI(Item item)
@@ -263,7 +271,7 @@ public class ShopView : BaseView
     {
         base.ShowScreen();
 
-        // Update the message label as per your requirement
+        // Update the message label
         m_MessageLabel.text = "How can I help you?";
 
         // Reset the confirm button text to the default value
@@ -281,5 +289,8 @@ public class ShopView : BaseView
         m_ItemIcon.style.backgroundImage = null; // Reset the item icon
         m_ItemName.text = ""; // Clear the item name
         m_ItemDesc.text = ""; // Clear the item description
+
+        // todo Set the staff button
+        m_StaffButton.visible = GameStateManager.Instance.CurrentLocation == "Lion Area";
     }
 }

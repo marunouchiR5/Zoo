@@ -112,4 +112,22 @@ public abstract class BaseView : MonoBehaviour
             ScreenEnded?.Invoke();
         }
     }
+
+    public string GetScreenName()
+    {
+        if (string.IsNullOrEmpty(m_ScreenName))
+            return "";
+
+        string spacedName = "";
+        foreach (char c in m_ScreenName)
+        {
+            // If the character is uppercase and it's not the first character, add a space before it
+            if (char.IsUpper(c) && spacedName.Length > 0)
+                spacedName += " ";
+
+            spacedName += c;
+        }
+
+        return spacedName;
+    }
 }

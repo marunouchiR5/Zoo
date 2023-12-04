@@ -25,12 +25,12 @@ public class LionArea : BaseView
 
     private void OnEnable()
     {
-
+        ShopView.StaffButtonClicked += OnClickStaff;
     }
 
     private void OnDisable()
     {
-
+        ShopView.StaffButtonClicked -= OnClickStaff;
     }
 
     protected override void SetVisualElements()
@@ -51,7 +51,7 @@ public class LionArea : BaseView
         m_WhiteLion3?.RegisterCallback<ClickEvent>(InteractWhiteLion);
         m_WhiteLion4?.RegisterCallback<ClickEvent>(InteractWhiteLion);
         m_Navigation?.RegisterCallback<ClickEvent>(ClickNavigation);
-        m_Staff?.RegisterCallback<ClickEvent>(ClickStaff);
+        m_Staff?.RegisterCallback<ClickEvent>(OpenShop);
     }
 
     private void InteractWhiteLion(ClickEvent evt)
@@ -197,9 +197,30 @@ public class LionArea : BaseView
         m_GameViewManager.ConversationView.HideScreen();
     }
 
-    private void ClickStaff(ClickEvent evt)
+    private void OpenShop(ClickEvent evt)
     {
-        Debug.Log(m_ScreenName + " " + evt.ToString());
+        GameStateManager.Instance.SetCurrentShopInventoryId("LionArea");
+        m_GameViewManager.ShowShopView();
+    }
+
+    public override void ShowScreen()
+    {
+        base.ShowScreen();
+
+        if (GameStateManager.Instance != null)
+        {
+            if (!GameStateManager.Instance.Aware && !GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
+            {
+                GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
+            }
+        }
+
+        SceneScreenStarted?.Invoke();
+    }
+
+    // event-handling methods
+    private void OnClickStaff()
+    {
         if (!GameStateManager.Instance.IsCurrentBodyEquipment("Black Clothes") && GameStateManager.Instance.Aware)
         {
             GameStateManager.Instance.SetActiveConversationData("LionArea", "StaffAware");
@@ -213,7 +234,7 @@ public class LionArea : BaseView
             GameStateManager.Instance.SetActiveConversationData("LionArea", "Staff");
             m_GameViewManager.ShowConversationView();
         }
-        
+
         // state related
     }
 
@@ -237,20 +258,5 @@ public class LionArea : BaseView
         // after showing conversation, show win screen
         Debug.Log("Escaped!");
         m_GameViewManager.ShowGameFinalView();
-    }
-
-    public override void ShowScreen()
-    {
-        base.ShowScreen();
-
-        if (GameStateManager.Instance != null)
-        {
-            if (!GameStateManager.Instance.Aware && !GameStateManager.Instance.VisitedAreas.Contains(m_ScreenName))
-            {
-                GameStateManager.Instance.UpdateVisitedAreas(m_ScreenName);
-            }
-        }
-
-        SceneScreenStarted?.Invoke();
     }
 }

@@ -115,61 +115,61 @@ public class GameViewManager : MonoBehaviour
     public void ShowZooGate()
     {
         ShowSceneView(m_ZooGate);
-        LocationChanged?.Invoke("Zoo Gate");
+        LocationChanged?.Invoke(m_ZooGate.GetScreenName());
     }
 
     public void ShowRabbitArea()
     {
         ShowSceneView(m_RabbitArea);
-        LocationChanged?.Invoke("Rabbit Area");
+        LocationChanged?.Invoke(m_RabbitArea.GetScreenName());
     }
 
     public void ShowLionArea()
     {
         ShowSceneView(m_LionArea);
-        LocationChanged?.Invoke("Lion Area");
+        LocationChanged?.Invoke(m_LionArea.GetScreenName());
     }
 
     public void ShowElephantArea()
     {
         ShowSceneView(m_ElephantArea);
-        LocationChanged?.Invoke("Elephant Area");
+        LocationChanged?.Invoke(m_ElephantArea.GetScreenName());
     }
 
     public void ShowMonkeyArea()
     {
         ShowSceneView(m_MonkeyArea);
-        LocationChanged?.Invoke("Monkey Area");
+        LocationChanged?.Invoke(m_MonkeyArea.GetScreenName());
     }
 
     public void ShowZooDirectorRoom()
     {
         ShowSceneView(m_ZooDirectorRoom);
-        LocationChanged?.Invoke("Zoo Director's Room");
+        LocationChanged?.Invoke(m_ZooDirectorRoom.GetScreenName());
     }
 
     public void ShowAquariumOutside()
     {
         ShowSceneView(m_AquariumOutside);
-        LocationChanged?.Invoke("Aquarium Entrance");
+        LocationChanged?.Invoke(m_AquariumOutside.GetScreenName());
     }
 
     public void ShowAquariumInside()
     {
         ShowSceneView(m_AquariumInside);
-        LocationChanged?.Invoke("Aquarium Inside");
+        LocationChanged?.Invoke(m_AquariumInside.GetScreenName());
     }
 
     public void ShowGuestRoom()
     {
         ShowSceneView(m_GuestRoom);
-        LocationChanged?.Invoke("Guest Room");
+        LocationChanged?.Invoke(m_GuestRoom.GetScreenName());
     }
 
     public void ShowWhaleArea()
     {
         ShowSceneView(m_WhaleArea);
-        LocationChanged?.Invoke("Whale Area");
+        LocationChanged?.Invoke(m_WhaleArea.GetScreenName());
     }
 
     void SetupOverlayViews()

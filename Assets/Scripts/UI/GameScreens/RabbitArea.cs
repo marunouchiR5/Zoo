@@ -27,7 +27,7 @@ public class RabbitArea : BaseView
 
     private void OnEnable()
     {
-        
+       
     }
 
     private void OnDisable()

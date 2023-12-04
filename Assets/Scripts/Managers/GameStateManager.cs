@@ -40,6 +40,7 @@ public class GameStateManager : MonoBehaviour
     public bool JellyfishLightUsed { get; set; }
     public bool MapCornerFed { get; set; }
     public bool TicketSold { get; set; }
+    public string CurrentLocation { get; set; }
 
     // specific view related
     public ConversationData ConversationData;
@@ -50,8 +51,6 @@ public class GameStateManager : MonoBehaviour
     public Dictionary<string, List<ItemEntry>> ShopInventories = new Dictionary<string, List<ItemEntry>>();
     public Dictionary<string, List<ItemEntry>> CopiedShopInventories = new Dictionary<string, List<ItemEntry>>();
     public string currentShopInventoryId;
-    public ShopInventory ShopInventoryRabbitArea;
-    public ShopInventory ShopInventoryAquariumInside;
 
     void Awake()
     {
@@ -126,15 +125,18 @@ public class GameStateManager : MonoBehaviour
         NewGameStarted?.Invoke();
 
         // shop related
-        InitializeShopInventories();
+        LoadShopInventoriesFromResources();
         CopyShopInventories();
     }
 
-    private void InitializeShopInventories()
+    private void LoadShopInventoriesFromResources()
     {
-        // Use the ShopInventory scriptable objects to initialize the shop inventories
-        ShopInventories["RabbitArea"] = ConvertShopInventoryToList(ShopInventoryRabbitArea);
-        ShopInventories["AquariumInside"] = ConvertShopInventoryToList(ShopInventoryAquariumInside);
+        ShopInventory[] shopInventories = Resources.LoadAll<ShopInventory>("GameData/ShopInventories");
+
+        foreach (ShopInventory shopInventory in shopInventories)
+        {
+            ShopInventories[shopInventory.name] = ConvertShopInventoryToList(shopInventory);
+        }
     }
 
     private List<ItemEntry> ConvertShopInventoryToList(ShopInventory shopInventory)
