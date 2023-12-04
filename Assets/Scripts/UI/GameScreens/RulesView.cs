@@ -80,7 +80,17 @@ public class RulesView : BaseView
     public override void ShowScreen()
     {
         base.ShowScreen();
+
         FillRulesList(GameStateManager.Instance.CollectedRuleSets);
+
+        // Clear the selection in the ListView
+        if (m_RulesList != null)
+        {
+            m_RulesList.selectedIndex = -1;
+        }
+
+        selectedRuleSet = null;
+        m_ReadButton.SetEnabled(false);
     }
 
     private void FillRulesList(List<RuleSet> rulesList)
