@@ -1,0 +1,3 @@
+﻿This is a point-and-click game about you visiting a zoo.
+In this seemingly normal zoo, you are encouraged to explore different areas, interact with animals and employees, collect items, and even purchase special animal merchandise, food, and drinks. You will receive rules along the way, which you can follow or defy based on your choices and interests. You can read your collected rules and make use of your purchased items by clicking them on the right side of the screen. 
+Make your decision wise, as if you act wrong, you will not only lose your sanity but eventually find yourself trapped in the zoo. Good luck on your visit (or perhaps your escape from the zoo)!

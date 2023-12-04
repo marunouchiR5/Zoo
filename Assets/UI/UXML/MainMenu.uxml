@@ -4,7 +4,15 @@
         <ui:Label text="Zoo" parse-escape-sequences="true" display-tooltip-when-elided="true" name="game-title" style="font-size: 64px; -unity-font-style: bold; color: rgb(255, 255, 255); left: 100px; top: 100px;" />
         <ui:VisualElement name="buttons" style="flex-direction: column; bottom: 100px; align-self: flex-end;">
             <ui:Button text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="new-game" class="main-menu--buttons" />
+            <ui:Button text="Instructions" parse-escape-sequences="true" display-tooltip-when-elided="true" name="instructions" class="main-menu--buttons" />
             <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit" class="main-menu--buttons" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LogView" style="position: absolute; align-self: center; display: none;">
+            <Style src="project://database/Assets/UI/USS/ConversationView.uss?fileID=7433441132597879392&amp;guid=cab8315123d424941adec9e8bcc4a5db&amp;type=3#ConversationView" />
+            <ui:VisualElement name="log-view" style="align-items: center; display: flex; width: 1920px; height: 1080px; background-color: rgba(0, 0, 0, 0.75);">
+                <ui:ScrollView name="log-scroll-view" style="width: 1000px; height: 1080px; background-color: rgb(217, 217, 217); position: absolute;" />
+                <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="back--button" class="log-button" style="right: 200px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

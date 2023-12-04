@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc60808d016a24fb9f6e35135f4cb2, type: 3}
+  m_Name: A STICKY NOTE LEFT BEHIND BY AN EX-GUARD WHO WORKED IN THE ELEPHANTS AREA
+    SECURITY ROOM THREE YEARS AGO 1
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: 
+    Content: To the person taking the shift after me, someone who stumbles across
+      this room, or to a new guard working here greetings.
+    Options: []
+  - Speaker: 
+    Content: "Please, you must follow the instructions on this note, these are experiences
+      I\u2019ve accumulated that can ensure your on-job safety and sanity."
+    Options: []
+  - Speaker: 
+    Content: "I don\u2019t want to lose another colleague and don\u2019t want to
+      experience strange events."
+    Options: []
+  - Speaker: 
+    Content: "I trust that you don\u2019t either."
+    Options: []
+  - Speaker: 
+    Content: After seeing these, pretend nothing happened and carry on with your
+      duties.
+    Options: []
+  - Speaker: 1
+    Content: At any moment, remember the color of your uniform.
+    Options: []
+  - Speaker: 1
+    Content: It can be any color, red, blue, black.
+    Options: []
+  - Speaker: 1
+    Content: Do not change the colors of your clothing.
+    Options: []
+  - Speaker: 1
+    Content: It is key to remain firm on your self-perception.
+    Options: []
+  - Speaker: 1
+    Content: Do not let IT discover that you are experiencing doubt or panic about
+      the outside world.
+    Options: []
+  - Speaker: 2
+    Content: Believe.
+    Options: []
+  - Speaker: 2
+    Content: Believe.
+    Options: []
+  - Speaker: 2
+    Content: Believe.
+    Options: []
+  - Speaker: 2
+    Content: Humans are worthy of trust.
+    Options: []
+  - Speaker: 2
+    Content: Only humans do.
+    Options: []
+  - Speaker: 3
+    Content: "Rabbits eat people; people wearing rabbit ears won\u2019t."
+    Options: []
+  - Speaker: 3
+    Content: "The shades eat people; the gardener trimming the trees won\u2019t."
+    Options: []
+  - Speaker: 3
+    Content: "The elephants will eat people; the people watching elephants won\u2019t;
+      the people not watching elephants won\u2019t either."
+    Options: []
+  - Speaker: 3
+    Content: "White lions eat people; glowing jellyfish won\u2019t."
+    Options: []
+  - Speaker: 3
+    Content: "[Some Additional Scribble With Childish Handwriting] Because jellyfish
+      don\u2019t have a brain? [End Childish Scribble]"
+    Options: []
+  - Speaker: 4
+    Content: IT will cry when IT is hindered.
+    Options: []
+  - Speaker: 4
+    Content: IT will laugh when it succeeds.
+    Options: []
+  - Speaker: 4
+    Content: "Don\u2019t care what IT is, run away whenever you discover IT."
+    Options: []
+  - Speaker: 4
+    Content: "They don\u2019t yet know."
+    Options: []
+  - Speaker: 5
+    Content: Any strange food items that appear on shelves are tests.
+    Options: []
+  - Speaker: 5
+    Content: Do not read labels, and do not care how other people call them.
+    Options: []
+  - Speaker: 5
+    Content: Ignore.
+    Options: []
+  - Speaker: 5
+    Content: Purchase and consume them if necessary.
+    Options: []
+  - Speaker: 5
+    Content: Do not let IT know you feel ITs presence.
+    Options: []
+  SetName: A STICKY NOTE LEFT BEHIND BY AN EX-GUARD WHO WORKED IN THE ELEPHANTS AREA
+    SECURITY ROOM THREE YEARS AGO

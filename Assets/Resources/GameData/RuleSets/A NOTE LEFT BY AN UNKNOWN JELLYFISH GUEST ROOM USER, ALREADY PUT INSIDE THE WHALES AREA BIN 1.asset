@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc60808d016a24fb9f6e35135f4cb2, type: 3}
+  m_Name: A NOTE LEFT BY AN UNKNOWN JELLYFISH GUEST ROOM USER, ALREADY PUT INSIDE
+    THE WHALES AREA BIN 1
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: 
+    Content: "[The beginning and sides are littered with \u201CI am afraid\u201D
+      \u201CI want to survive.\u201D \u201CDon\u2019t Believe\u201D \u201CDo Believe!\u2019
+      \u201CAll messed up!\u201D \u201CI must write it down\u201D Where the title
+      should have been in bold strokes \u201CIF THESE ARE NOT FOLLOWED, THERE IS
+      NO ESCAPE!\u201D]"
+    Options: []
+  - Speaker: 1
+    Content: Monkeys and white lions can see IT.
+    Options: []
+  - Speaker: 1
+    Content: Jellyfish and rabbits can soothe IT.
+    Options: []
+  - Speaker: 1
+    Content: Elephants and goats are ITs toys.
+    Options: []
+  - Speaker: 2
+    Content: Trust white lions.
+    Options: []
+  - Speaker: 2
+    Content: White lions bite those with the hope of being saved, and they also bite
+      those without.
+    Options: []
+  - Speaker: 2
+    Content: "White lions\u2019 roar is the siren that drives IT away."
+    Options: []
+  - Speaker: 2
+    Content: "White lions\u2019 roar is the elegy to the deceased."
+    Options: []
+  - Speaker: 3
+    Content: Changing clothes will be spotted, do not change clothes.
+    Options: []
+  - Speaker: 3
+    Content: "[Mad scribble: solidarity, courage, and unshaken loyalty are human\u2019s
+      best advantages]"
+    Options: []
+  - Speaker: 4
+    Content: The guards in the Elephants Area are trustworthy.
+    Options: []
+  - Speaker: 5
+    Content: IT likes light, especially at night.
+    Options: []
+  - Speaker: 5
+    Content: IT dislikes claustrophobic spaces.
+    Options: []
+  - Speaker: 5
+    Content: Rest in dark and small rooms.
+    Options: []
+  - Speaker: 6
+    Content: Heck! Goat Meat is really raw meat! [This line is the most sketchy,
+      followed by another sentence in normal handwriting] I can actually fucking
+      eat it.
+    Options: []
+  - Speaker: 7
+    Content: "You can\u2019t be discovered when standing next to monkeys."
+    Options: []
+  - Speaker: 8
+    Content: Humans have two eyes, arranged horizontally, one on each side of the
+      nose.
+    Options: []
+  - Speaker: 8
+    Content: Others are not humans.
+    Options: []
+  - Speaker: 8
+    Content: If the appearance of a human changes, he or she is being watched by
+      IT.
+    Options: []
+  - Speaker: 8
+    Content: Do not trust humans that are not humans.
+    Options: []
+  - Speaker: 9
+    Content: Do not care about visitors with smiles on their faces.
+    Options: []
+  - Speaker: 9
+    Content: "They haven\u2019t discovered anything."
+    Options: []
+  - Speaker: 9
+    Content: Find people fearful like myself.
+    Options: []
+  - Speaker: 9
+    Content: They are trustworthy.
+    Options: []
+  - Speaker: 9
+    Content: They already know.
+    Options: []
+  - Speaker: 10
+    Content: Thank the dried jellyfish and drowned elephants.
+    Options: []
+  - Speaker: 10
+    Content: Remember that they died for protecting humans.
+    Options: []
+  - Speaker: 11
+    Content: There is an exit, but not in the Monkeys Area.
+    Options: []
+  - Speaker: 11
+    Content: I do not know what that road leads to.
+    Options: []
+  - Speaker: 12
+    Content: At all times, remember you are human, and not animal.
+    Options: []
+  SetName: A NOTE LEFT BY AN UNKNOWN JELLYFISH GUEST ROOM USER, ALREADY PUT INSIDE
+    THE WHALES AREA BIN

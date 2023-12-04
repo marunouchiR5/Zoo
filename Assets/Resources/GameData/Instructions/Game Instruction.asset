@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc60808d016a24fb9f6e35135f4cb2, type: 3}
+  m_Name: Game Instruction
+  m_EditorClassIdentifier: 
+  Elements:
+  - Speaker: 
+    Content: This is a point-and-click game about you visiting a zoo.
+    Options: []
+  - Speaker: 
+    Content: In this seemingly normal zoo, you are encouraged to explore different
+      areas, interact with animals and employees, collect items, and even purchase
+      special animal merchandise, food, and drinks.
+    Options: []
+  - Speaker: 
+    Content: You will receive rules along the way, which you can follow or defy based
+      on your choices and interests.
+    Options: []
+  - Speaker: 
+    Content: You can read your collected rules and make use of your purchased items
+      by clicking them on the right side of the screen.
+    Options: []
+  - Speaker: 
+    Content: Make your decision wise, as if you act wrong, you will not only lose
+      your sanity but eventually find yourself trapped in the zoo.
+    Options: []
+  - Speaker: 
+    Content: Good luck on your visit (or perhaps your escape from the zoo)!
+    Options: []
+  SetName: Game Instruction
