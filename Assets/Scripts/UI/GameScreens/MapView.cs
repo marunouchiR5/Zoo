@@ -15,12 +15,12 @@ public class MapView : BaseView
 
     private void OnEnable()
     {
-
+        ZooGate.MapCollected += OnMapCollected;
     }
 
     private void OnDisable()
     {
-
+        ZooGate.MapCollected -= OnMapCollected;
     }
 
     protected override void SetVisualElements()
@@ -79,5 +79,11 @@ public class MapView : BaseView
     private void HideMapView(ClickEvent evt)
     {
         HideScreen();
+    }
+
+    // event-handling methods
+    private void OnMapCollected()
+    {
+        ShowScreen();
     }
 }

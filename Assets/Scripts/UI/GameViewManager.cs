@@ -229,7 +229,8 @@ public class GameViewManager : MonoBehaviour
 
     public void ShowMapView()
     {
-        ShowOverlayView(m_MapView);
+        // opening map view will not close other views
+        m_MapView?.ShowScreen();
     }
 
     public void ShowRulesView()

@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class ZooGate : BaseView
 {
+    public static event Action MapCollected;
+
     [Header("Rule Set to be Collected")]
     [SerializeField] RuleSet m_Rules;
 
@@ -75,6 +77,9 @@ public class ZooGate : BaseView
             // mark the map as collected
             GameStateManager.Instance.ZooGateMapCollected = true;
 
+            // show map view when first collect
+            MapCollected?.Invoke();
+
             // item related
         }
         else
@@ -142,8 +147,6 @@ public class ZooGate : BaseView
                     // ... other cases as needed ...
             }
         }
-
-        
     }
 
     private void Cancel()
