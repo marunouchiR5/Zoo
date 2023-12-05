@@ -86,18 +86,24 @@ public class ItemInspectView : BaseView
 
     private void UseItem(ClickEvent evt)
     {
-        // Perform use item logics here...
         Item selectedItem = GameStateManager.Instance.SelectedItem;
-        if (selectedItem is IUsable usableItem)
+        if (selectedItem is UsableItem usableItem)
         {
+            // Check if the item is of type Good and if current sanity is at MaxSanity
+            if (usableItem.ItemType == ItemType.Good && GameStateManager.Instance.CurrentSanity >= GameStateManager.MaxSanity)
+            {
+                // Return early if the conditions are met
+                return;
+            }
+
             usableItem.Use();
+
+            // Inform Inventory Display to update
+            ItemUsed?.Invoke();
+
+            // Close the inspect view after the item is used
+            HideScreen();
         }
-
-        // Inform Inventory Display to update
-        ItemUsed?.Invoke();
-
-        // Close the inspect view after the item is used
-        HideScreen();
     }
 
     private void EquipItem(ClickEvent evt)

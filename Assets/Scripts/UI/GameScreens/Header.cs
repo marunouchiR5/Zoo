@@ -9,6 +9,8 @@ public class Header : BaseView
 
     Label m_LocationLabel;
 
+    private Coroutine blinkCoroutine;
+
     private void OnEnable()
     {
         GameViewManager.LocationChanged += OnLocationChanged;
@@ -55,6 +57,45 @@ public class Header : BaseView
         else
         {
             Debug.LogWarning("Location label in UI is not available for update.");
+        }
+
+        // Start or stop blinking effect based on location
+        if (location == "Whale Area")
+        {
+            if (blinkCoroutine == null)
+            {
+                blinkCoroutine = StartCoroutine(BlinkTextEffect());
+            }
+        }
+        else
+        {
+            if (blinkCoroutine != null)
+            {
+                StopCoroutine(blinkCoroutine);
+                blinkCoroutine = null;
+                m_LocationLabel.style.display = DisplayStyle.Flex; // Ensure label is visible when not in Whale Area
+            }
+        }
+    }
+
+    private IEnumerator BlinkTextEffect()
+    {
+        string[] locations = new string[] { "Elephant Area", "Whale Area" }; // Possible location labels
+
+        while (true)
+        {
+            // Show the label
+            m_LocationLabel.style.display = DisplayStyle.Flex;
+            // Wait for a random time interval while the label is visible
+            yield return new WaitForSeconds(Random.Range(0.2f, 1.0f));
+
+            // Hide the label
+            m_LocationLabel.style.display = DisplayStyle.None;
+            // Wait for a random time interval while the label is hidden
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+
+            // Randomly change the label text
+            m_LocationLabel.text = locations[Random.Range(0, locations.Length)];
         }
     }
 }

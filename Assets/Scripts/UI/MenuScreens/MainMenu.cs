@@ -34,7 +34,13 @@ public class MainMenuUI : MonoBehaviour
             instructionsButton = root.Q<Button>("instructions");
             instructionsPanel = root.Q<VisualElement>("LogView");
 
-            // Find the ListView and BackButton
+            // Explicitly set the initial state of instructionsPanel to be hidden
+            if (instructionsPanel != null)
+            {
+                instructionsPanel.style.display = DisplayStyle.None;
+            }
+
+            // Find the ScrollView and BackButton
             logScrollView = instructionsPanel.Q<ScrollView>("log-scroll-view");
             backButton = instructionsPanel.Q<Button>("back--button");
 
