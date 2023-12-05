@@ -2,8 +2,8 @@
     <ui:VisualElement name="shop-item" style="height: 80px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); flex-direction: row; justify-content: space-between;">
         <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" style="font-size: 32px; -unity-font-style: bold; -unity-text-align: middle-left; margin-left: 25px;" />
         <ui:VisualElement name="amount-area" style="flex-grow: 1; flex-direction: row; align-self: center; position: absolute; right: 20px;">
-            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-stock" style="font-size: 24px; -unity-text-align: middle-left; margin-right: 20px;" />
-            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-price" style="font-size: 24px; -unity-text-align: middle-left; margin-right: 20px;" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-stock" style="font-size: 24px; -unity-text-align: middle-right; margin-right: 90px;" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-price" style="font-size: 24px; -unity-text-align: middle-right; margin-right: 40px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

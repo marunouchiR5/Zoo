@@ -91,7 +91,7 @@ public class InventoryDisplay : HUD
         Debug.Log("OnTokenUpdated - current token: " + GameStateManager.Instance.CurrentToken.ToString());
         m_Token.text = "Token: " + GameStateManager.Instance.CurrentToken.ToString();
     }
-    
+
     private void OnItemUsed()
     {
         // Retrieve the selected item
@@ -101,12 +101,17 @@ public class InventoryDisplay : HUD
         if (GameStateManager.Instance.CurrentInventory.Contains(selectedItem))
         {
             GameStateManager.Instance.CurrentInventory.Remove(selectedItem);
-
-            // Update the inventory
-            FillInventoryList(GameStateManager.Instance.CurrentInventory);
+            UpdateListView();
         }
 
         // Optionally, clear the selected item in GameStateManager
         GameStateManager.Instance.SelectedItem = null;
+    }
+
+    private void UpdateListView()
+    {
+        // Update the ListView's items source
+        m_InventoryList.itemsSource = GameStateManager.Instance.CurrentInventory;
+        m_InventoryList.Rebuild(); // Refresh the ListView to reflect the changes
     }
 }

@@ -5,8 +5,8 @@
         <ui:VisualElement name="items-area" style="height: 70%; flex-direction: row; background-color: rgba(0, 0, 0, 0.48);">
             <ui:VisualElement name="list-area" style="width: 50%; justify-content: center;">
                 <ui:VisualElement name="item-list-labels" style="flex-direction: row; justify-content: space-between; width: 550px; align-self: center; margin-bottom: 10px;">
-                    <ui:Label tabindex="-1" text="Trade Items" parse-escape-sequences="true" display-tooltip-when-elided="true" name="trade-items--label" class="item-list--labels" />
-                    <ui:Label tabindex="-1" text="Stock" parse-escape-sequences="true" display-tooltip-when-elided="true" name="stock--label" class="item-list--labels" />
+                    <ui:Label tabindex="-1" text="Trade Items" parse-escape-sequences="true" display-tooltip-when-elided="true" name="trade-items--label" class="item-list--labels" style="padding-left: 20px;" />
+                    <ui:Label tabindex="-1" text="Stock" parse-escape-sequences="true" display-tooltip-when-elided="true" name="stock--label" class="item-list--labels" style="margin-left: 140px;" />
                     <ui:Label tabindex="-1" text="Required" parse-escape-sequences="true" display-tooltip-when-elided="true" name="required-label" class="item-list--labels" />
                 </ui:VisualElement>
                 <ui:ListView focusable="true" name="item-list-view" style="width: 550px; height: 410px; align-self: center; background-color: rgb(217, 217, 217);" />
